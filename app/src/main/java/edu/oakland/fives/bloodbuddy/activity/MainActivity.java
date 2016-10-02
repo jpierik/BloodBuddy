@@ -1,4 +1,4 @@
-package edu.oakland.fives.bloodbuddy.activity.activity;
+package edu.oakland.fives.bloodbuddy.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
