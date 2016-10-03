@@ -25,7 +25,9 @@ public class MyIntro extends AppIntro {
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                         | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         // Just set a title, description, background and image. AppIntro will do the rest.
-        addSlide(AppIntroFragment.newInstance(getString(R.string.app_intro), getString(R.string.app_tutorial), R.drawable.doctor, Color.parseColor("#ff4081")));
+        addSlide(AppIntroFragment.newInstance(getString(R.string.app_intro2), getString(R.string.app_tutorial2), R.drawable.wondering, Color.parseColor("#26C6DA")));
+        addSlide(AppIntroFragment.newInstance(getString(R.string.app_intro), getString(R.string.app_tutorial), R.drawable.smart, Color.parseColor("#ff4081")));
+
 
         // OPTIONAL METHODS
         // Override bar/separator color.

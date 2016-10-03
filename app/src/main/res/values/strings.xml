@@ -2,4 +2,6 @@
     <string name="app_name">BloodBuddy</string>
     <string name="app_intro">Welcome to Bloodbuddy App</string>
     <string name="app_tutorial">Input your blood count results to obtain a meaningful info of what this result really mean!</string>
+    <string name="app_tutorial2">No worries! This app will explain everything you need!</string>
+    <string name="app_intro2">Do you have any idea of what your blood work results really mean?</string>
 </resources>
