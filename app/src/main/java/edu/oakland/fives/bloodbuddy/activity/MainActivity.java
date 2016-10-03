@@ -14,6 +14,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //start app intro
+        startAppIntro();
+    }
+
+
+    //app intro method
+    private void startAppIntro() {
         Thread t = new Thread(new Runnable() {
             @Override
             public void run() {
