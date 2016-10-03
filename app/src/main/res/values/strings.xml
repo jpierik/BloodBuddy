@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BloodBuddy</string>
+    <string name="app_intro">Welcome to Bloodbuddy App</string>
+    <string name="app_tutorial">Input your blood count results to obtain a meaningful info of what this result really mean!</string>
 </resources>
