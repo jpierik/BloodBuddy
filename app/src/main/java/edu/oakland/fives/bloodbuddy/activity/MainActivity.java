@@ -1,15 +1,23 @@
 package edu.oakland.fives.bloodbuddy.activity;
 
 
+import android.animation.ValueAnimator;
+import android.app.ActivityManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.preference.PreferenceManager;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.OvershootInterpolator;
+import android.widget.Button;
 import android.widget.Toast;
 import java.util.ArrayList;
 import edu.oakland.fives.bloodbuddy.R;
@@ -30,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
             "Millions/m", "Millions/L", "Millions/L", "Millions/L"};
     private ArrayList<DataModel> tests;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         //start app intro
         // startAppIntro();
@@ -44,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
 
         //define the arraylist
         tests = new ArrayList<>();
-
-
+      //  ActivityManager.TaskDescription tDesc = new ActivityManager.TaskDescription(null,null,getColor(R.color.yellow_700));
+       // this.setTaskDescription(tDesc);
         //insert the test information into the data model and then add the data to the arraylist
         for(int i =0;i<testcodes.length;i++){
             DataModel dataModel = new DataModel();
@@ -60,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
         //attach touch listener to recycle view itmes
         //addTouchListenerToRecyclerView(recyclerView, tests);
+
 
     }
 
@@ -92,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
     //test method to make sure values are collected correctly
     public void getTheData(View view) {
+
         Toast.makeText(getApplication(), "The data you entered for "+tests.get(0).getTestName()+" is "
                 +tests.get(0).getValue()+"\nThe data you entered for "+tests.get(1).getTestName()+" is "
                 +tests.get(1).getValue()+"\nThe data you entered for "+tests.get(2).getTestName()+" is "
@@ -148,4 +158,6 @@ public class MainActivity extends AppCompatActivity {
         // Start the thread
         t.start();
     }
+
+
 }
