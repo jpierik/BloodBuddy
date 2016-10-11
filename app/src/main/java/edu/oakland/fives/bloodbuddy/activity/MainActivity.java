@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
                     SharedPreferences.Editor e = getPrefs.edit();
 
                     //  Edit preference to make it false because we don't want this to run again
-                    e.putBoolean("firstStartVersion102", true);
+                    e.putBoolean("firstStartVersion12", false);
 
                     //  Apply changes
                     e.apply();
