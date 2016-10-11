@@ -36,6 +36,7 @@
                 android:inputType="numberDecimal"
                 android:ems="5"
                 android:hint="enter here"
+                android:imeOptions="flagNoExtractUi"
                 android:textStyle="italic"
                 android:textColorHint="@android:color/darker_gray"
                 android:id="@+id/editText"

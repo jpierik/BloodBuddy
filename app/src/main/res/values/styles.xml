@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <!--<item name="colorPrimary">@android:color/transparent</item>-->
-        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimary">@color/yellow_700</item>
         <item name="colorPrimaryDark">@color/amber_600</item>
         <item name="colorAccent">@color/colorAccent</item>
         <!--<item name="android:windowTranslucentStatus">true</item>-->
