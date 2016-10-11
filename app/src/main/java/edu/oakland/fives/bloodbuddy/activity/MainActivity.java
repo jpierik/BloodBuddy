@@ -35,10 +35,14 @@ public class MainActivity extends AppCompatActivity {
 
     //Todo: Fill in the correct names and units for tests
     //array of test names
-    private String[] testcodes = {"WBC", "RBC", "HGB","HCT", "MCV", "MCH", "MCHC"};
+    private String[] testcodes = {"WBC", "RBC", "HGB","HCT", "MCV", "MCH", "MCHC", "RDW", "PLT", "MPV",
+    "NEUT %", "LYMPH %", "MONO %", "EOS %", "BASO %", "NEUT,ABS", "LYMPH,ABS", "MONO,ABS", "EOS,ABS",
+    "BASO,ABS"};
     //array of the test units
-    private String[] testUnits = {"Millions/ML", "Millions/L", "Millions/S",
-            "Millions/m", "Millions/L", "Millions/L", "Millions/L"};
+    private String[] testUnits = {"Thousands/uL", "Millons/uL", "grams/dL",
+            "%", "fL", "pg", "g/dL", "%", "Thousands/uL", "fL",
+            "%", "%", "%", "%", "%", "Thousands/uL", "Thousands/uL", "Thousands/uL",
+            "Thousands/uL", "Thousands/uL"};
     private ArrayList<DataModel> tests;
     Button button;
 
