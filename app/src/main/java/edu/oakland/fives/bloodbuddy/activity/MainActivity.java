@@ -14,6 +14,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -38,21 +40,24 @@ public class MainActivity extends AppCompatActivity {
     private String[] testUnits = {"Millions/ML", "Millions/L", "Millions/S",
             "Millions/m", "Millions/L", "Millions/L", "Millions/L"};
     private ArrayList<DataModel> tests;
-
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getTheme().applyStyle(R.style.MyRandomTheme, true);
         setContentView(R.layout.activity_main);
+        button = (Button)findViewById(R.id.button);
+
 
         getWindow().getDecorView().setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                         | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
 // | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
 // | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
-                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);;
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         //start app intro
-        // startAppIntro();
+         startAppIntro();
 
         //create recyclerview
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -76,7 +81,27 @@ public class MainActivity extends AppCompatActivity {
         //attach touch listener to recycle view itmes
         //addTouchListenerToRecyclerView(recyclerView, tests);
 
+        button.setOnTouchListener( new View.OnTouchListener() {
 
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_UP:
+                        Log.v("tag", "end long click");
+                        getWindow().setStatusBarColor(getResources().getColor(R.color.amber_600));
+                        break;
+                    case MotionEvent.ACTION_DOWN:
+                        getWindow().setStatusBarColor(getResources().getColor(android.R.color.transparent));
+                        Log.v("tag", "start long click");
+                        break;
+                    default:
+                        break;
+                }
+
+                return false;
+            }
+        });
     }
 
 
@@ -114,6 +139,8 @@ public class MainActivity extends AppCompatActivity {
                 +tests.get(1).getValue()+"\nThe data you entered for "+tests.get(2).getTestName()+" is "
                 +tests.get(2).getValue(), Toast.LENGTH_LONG).show();
     }
+
+
 
 
     //touch listener method
