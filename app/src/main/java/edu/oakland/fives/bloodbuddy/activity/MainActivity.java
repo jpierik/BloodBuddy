@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Todo: Fill in the correct names and units for tests
     //array of test names
-    private String[] testcodes = {"WBC", "RBC", "HGB","HCT", "MCV", "MCH", "MCHC", "RDW", "PLT", "MPV",
+    private String[] testCodes = {"WBC", "RBC", "HGB","HCT", "MCV", "MCH", "MCHC", "RDW", "PLT", "MPV",
     "NEUT %", "LYMPH %", "MONO %", "EOS %", "BASO %", "NEUT,ABS", "LYMPH,ABS", "MONO,ABS", "EOS,ABS",
     "BASO,ABS"};
     //array of the test units
@@ -71,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
       //  ActivityManager.TaskDescription tDesc = new ActivityManager.TaskDescription(null,null,getColor(R.color.yellow_700));
        // this.setTaskDescription(tDesc);
         //insert the test information into the data model and then add the data to the arraylist
-        for(int i =0;i<testcodes.length;i++){
+        for(int i =0;i<testCodes.length;i++){
             DataModel dataModel = new DataModel();
-            dataModel.setTestName(testcodes[i]);
+            dataModel.setTestName(testCodes[i]);
             dataModel.setTestUnits(testUnits[i]);
             tests.add(dataModel);
         }
@@ -93,10 +93,14 @@ public class MainActivity extends AppCompatActivity {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_UP:
                         Log.v("tag", "end long click");
-                        getWindow().setStatusBarColor(getResources().getColor(R.color.amber_600));
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                            getWindow().setStatusBarColor(getResources().getColor(R.color.amber_600));
+                        }
                         break;
                     case MotionEvent.ACTION_DOWN:
-                        getWindow().setStatusBarColor(getResources().getColor(android.R.color.transparent));
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                            getWindow().setStatusBarColor(getResources().getColor(android.R.color.transparent));
+                        }
                         Log.v("tag", "start long click");
                         break;
                     default:
