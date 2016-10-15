@@ -10,6 +10,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.preference.PreferenceManager;
 import android.support.annotation.RequiresApi;
+import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         createRecycleViewer(recyclerView, tests);
 
         //attach touch listener to recycle view itmes
-        //addTouchListenerToRecyclerView(recyclerView, tests);
+        addTouchListenerToRecyclerView(recyclerView, tests);
 
         button.setOnTouchListener( new View.OnTouchListener() {
 
@@ -162,8 +163,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onLongClick(View view, int position) {
-                //  Intent detail = new Intent(getApplicationContext(), Details.class);
-                //startActivity(detail);
+                BottomSheetDialogFragment bottomSheetDialogFragment = new TestInformation();
+                bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
             }
         }));
     }

@@ -4,4 +4,10 @@
     <string name="app_tutorial">Input your blood count results to obtain a meaningful info of what this result really mean!</string>
     <string name="app_tutorial2">No worries! This app will explain everything you need!</string>
     <string name="app_intro2">Do you have any idea of what your blood work results really mean?</string>
+
+    <string name="test_info">RBC stands for Red Blood Cells. Red blood cells carry oxygen from the
+    lungs to the rest of the body. They also carry carbon dioxide back to the lungs
+    so it can be exhaled. If the RBC count is low (anemia), the body may not be getting the oxygen it needs. If the count is too high (a condition called polycythemia), there is a chance that the red blood cells will clump together and block tiny blood vessels (capillaries). This also makes it hard for your red blood cells to carry oxygen. Red blood cells carry oxygen from the lungs to the rest of the body. They also carry carbon dioxide back to the lungs so it can be exhaled. If the RBC count is low (anemia), the body may not be getting the oxygen it needs. If the count is too high (a condition called polycythemia), there is a chance that the red blood cells will
+    clump together and block tiny blood vessels (capillaries). This also makes it hard for your red blood cells to carry oxygen.</string>
+
 </resources>
