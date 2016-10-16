@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
                 +tests.get(2).getValue(), Toast.LENGTH_LONG).show();
 
         TestValueAnalysis valueAnalysis = new TestValueAnalysis(tests);
-        valueAnalysis.printTestArray();
+        valueAnalysis.analysis();
     }
 
 

@@ -6,18 +6,71 @@ import edu.oakland.fives.bloodbuddy.model.DataModel;
 
 public class TestValueAnalysis {
 
-    ArrayList<DataModel> test;
+    ArrayList<DataModel> tests;
 
-    public TestValueAnalysis(ArrayList<DataModel> test) {
-        this.test = test;
+    public TestValueAnalysis(ArrayList<DataModel> tests) {
+        this.tests = tests;
     }
 
-    // this is just for testing
-    public void printTestArray() {
-        for (DataModel value : this.test) {
-            System.out.println(value.getTestName());
-            System.out.println(value.getValue());
-            System.out.println(" -------- ");
+    public void analysis() {
+        for (DataModel dataModel : this.tests) {
+            if (dataModel.getValue() != 0.0) {
+                switch (dataModel.getTestName()) {
+                    case "WBC":
+                        break;
+                    case "RBC":
+                        if (dataModel.getValue() < 4.6) {
+                            dataModel.setRange(1);
+                            dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        }
+                        else if (dataModel.getValue() > 6.0) {
+                            dataModel.setRange(3);
+                            dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        } else {
+                            dataModel.setRange(2);
+                            dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        }
+                        break;
+                    case "HGB":
+                        break;
+                    case "HCT":
+                        break;
+                    case "MCV":
+                        break;
+                    case "MCH":
+                        break;
+                    case "MCHC":
+                        break;
+                    case "RDW":
+                        break;
+                    case "PLT":
+                        break;
+                    case "MPV":
+                        break;
+                    case "NEUT %":
+                        break;
+                    case "LYMPH %":
+                        break;
+                    case "MONO %":
+                        break;
+                    case "EOS %":
+                        break;
+                    case "BASO %":
+                        break;
+                    case "NEUT,ABS":
+                        break;
+                    case "LYMPH,ABS":
+                        break;
+                    case "MONO,ABS":
+                        break;
+                    case "EOS,ABS":
+                        break;
+                    case "BASO,ABS":
+                        break;
+                    default:
+                        throw new RuntimeException("unreachable");
+                }
+            }
         }
     }
 
