@@ -145,14 +145,10 @@ public class MainActivity extends AppCompatActivity {
     //test method to make sure values are collected correctly
     public void getTheData(View view) {
 
-//        Toast.makeText(getApplication(), "The data you entered for "+tests.get(0).getTestName()+" is "
-//                +tests.get(0).getValue()+"\nThe data you entered for "+tests.get(1).getTestName()+" is "
-//                +tests.get(1).getValue()+"\nThe data you entered for "+tests.get(2).getTestName()+" is "
-//                +tests.get(2).getValue(), Toast.LENGTH_LONG).show();
 
         ArrayList<DataModel> userTests = new ArrayList<>();
         for (DataModel dataModel : tests) {
-            if (dataModel.getUserInput() == true) {
+            if (dataModel.getUserInput()) {
                 userTests.add(dataModel);
             }
         }
