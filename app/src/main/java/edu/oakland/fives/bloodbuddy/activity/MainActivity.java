@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+
         //create a list view that has the test data
         createRecycleViewer(recyclerView, tests);
 
@@ -148,6 +149,9 @@ public class MainActivity extends AppCompatActivity {
                 +tests.get(0).getValue()+"\nThe data you entered for "+tests.get(1).getTestName()+" is "
                 +tests.get(1).getValue()+"\nThe data you entered for "+tests.get(2).getTestName()+" is "
                 +tests.get(2).getValue(), Toast.LENGTH_LONG).show();
+
+        TestValueAnalysis valueAnalysis = new TestValueAnalysis(tests);
+        valueAnalysis.printTestArray();
     }
 
 
