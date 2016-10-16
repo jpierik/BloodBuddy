@@ -22,6 +22,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.OvershootInterpolator;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import edu.oakland.fives.bloodbuddy.R;
@@ -164,6 +165,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onLongClick(View view, int position) {
                 BottomSheetDialogFragment bottomSheetDialogFragment = new TestInformation();
+                Bundle bundle = new Bundle();
+                bundle.putInt("testPosition", position);
+                bottomSheetDialogFragment.setArguments(bundle);
                 bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
             }
         }));
