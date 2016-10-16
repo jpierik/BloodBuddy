@@ -145,23 +145,17 @@ public class MainActivity extends AppCompatActivity {
     //test method to make sure values are collected correctly
     public void getTheData(View view) {
 
-<<<<<<< HEAD
-        Toast.makeText(getApplication(), "The data you entered for "+tests.get(0).getTestName()+" is "
-                +tests.get(0).getValue()+"\nThe data you entered for "+tests.get(1).getTestName()+" is "
-                +tests.get(1).getValue()+"\nThe data you entered for "+tests.get(2).getTestName()+" is "
-                +tests.get(2).getValue(), Toast.LENGTH_LONG).show();
-
-        TestValueAnalysis valueAnalysis = new TestValueAnalysis(tests);
-        valueAnalysis.analysis();
-=======
 //        Toast.makeText(getApplication(), "The data you entered for "+tests.get(0).getTestName()+" is "
 //                +tests.get(0).getValue()+"\nThe data you entered for "+tests.get(1).getTestName()+" is "
 //                +tests.get(1).getValue()+"\nThe data you entered for "+tests.get(2).getTestName()+" is "
 //                +tests.get(2).getValue(), Toast.LENGTH_LONG).show();
+
+        TestValueAnalysis valueAnalysis = new TestValueAnalysis(tests);
+        valueAnalysis.analysis();
+
         BottomSheetDialogFragment bottomSheetDialogFragment = new ResultInformation();
 
         bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
->>>>>>> BetaApp
     }
 
 
