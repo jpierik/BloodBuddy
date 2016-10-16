@@ -154,7 +154,9 @@ public class MainActivity extends AppCompatActivity {
         valueAnalysis.analysis();
 
         BottomSheetDialogFragment bottomSheetDialogFragment = new ResultInformation();
-
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("tests", tests);
+        bottomSheetDialogFragment.setArguments(bundle);
         bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
     }
 

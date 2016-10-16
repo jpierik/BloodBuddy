@@ -5,6 +5,10 @@ package edu.oakland.fives.bloodbuddy.adapter;
  */
 
 import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.os.Build;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -14,6 +18,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -49,13 +54,19 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.MyViewHo
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView testName;
         TextView testUnits;
-        EditText userValue;
+        TextView resultSummary;
+        TextView resultValue;
+        ProgressBar progressBar;
+
         public MyViewHolder(View view) {
             super(view);
 
             testName = (TextView)view.findViewById(R.id.textViewName);
             testUnits = (TextView)view.findViewById(R.id.textViewUnits);
-            userValue = (EditText)view.findViewById(R.id.editText);
+            resultValue =(TextView)view.findViewById(R.id.textViewValue);
+            resultSummary = (TextView)view.findViewById(R.id.test_result_summary);
+            progressBar = (ProgressBar)view.findViewById(R.id.progressBar);
+
 
         }
     }
@@ -85,7 +96,26 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.MyViewHo
         final DataModel dataModel = tests.get(position);
         holder.testName.setText(dataModel.getTestName());
         holder.testUnits.setText(dataModel.getTestUnits());
-
+        holder.resultSummary.setText(dataModel.getAnalysis());
+        holder.progressBar.setProgress(dataModel.getRange());
+        holder.resultValue.setText("Value: "+dataModel.getValue());
+        switch (dataModel.getRange()){
+            case 1:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    holder.progressBar.setProgressTintList(ColorStateList.valueOf(Color.RED));
+                }
+                break;
+            case 2:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    holder.progressBar.setProgressTintList(ColorStateList.valueOf(Color.YELLOW));
+                }
+                break;
+            case 3:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    holder.progressBar.setProgressTintList(ColorStateList.valueOf(Color.GREEN));
+                }
+                break;
+        }
 
 
 

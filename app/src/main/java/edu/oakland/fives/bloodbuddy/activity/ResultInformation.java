@@ -44,14 +44,14 @@ public class ResultInformation extends BottomSheetDialogFragment {
     private TextView textviewNames;
     private String[] testnames, testInfo;
     private TextView textviewInfo;
-    private String[] testCodes = {"WBC", "RBC", "HGB","HCT", "MCV", "MCH", "MCHC", "RDW", "PLT", "MPV",
-            "NEUT %", "LYMPH %", "MONO %", "EOS %", "BASO %", "NEUT,ABS", "LYMPH,ABS", "MONO,ABS", "EOS,ABS",
-            "BASO,ABS"};
-    //array of the test units
-    private String[] testUnits = {"Thousands/uL", "Millons/uL", "grams/dL",
-            "%", "fL", "pg", "g/dL", "%", "Thousands/uL", "fL",
-            "%", "%", "%", "%", "%", "Thousands/uL", "Thousands/uL", "Thousands/uL",
-            "Thousands/uL", "Thousands/uL"};
+//    private String[] testCodes = {"WBC", "RBC", "HGB","HCT", "MCV", "MCH", "MCHC", "RDW", "PLT", "MPV",
+//            "NEUT %", "LYMPH %", "MONO %", "EOS %", "BASO %", "NEUT,ABS", "LYMPH,ABS", "MONO,ABS", "EOS,ABS",
+//            "BASO,ABS"};
+//    //array of the test units
+//    private String[] testUnits = {"Thousands/uL", "Millons/uL", "grams/dL",
+//            "%", "fL", "pg", "g/dL", "%", "Thousands/uL", "fL",
+//            "%", "%", "%", "%", "%", "Thousands/uL", "Thousands/uL", "Thousands/uL",
+//            "Thousands/uL", "Thousands/uL"};
     private ArrayList<DataModel> tests;
 
     @Override
@@ -68,16 +68,17 @@ public class ResultInformation extends BottomSheetDialogFragment {
         //create recyclerview
         RecyclerView recyclerView = (RecyclerView) dialog.findViewById(R.id.recycler_view2);
 
-        tests = new ArrayList<>();
+        //tests = new ArrayList<>();
         //  ActivityManager.TaskDescription tDesc = new ActivityManager.TaskDescription(null,null,getColor(R.color.yellow_700));
         // this.setTaskDescription(tDesc);
         //insert the test information into the data model and then add the data to the arraylist
-        for(int i =0;i<testCodes.length;i++){
-            DataModel dataModel = new DataModel();
-            dataModel.setTestName(testCodes[i]);
-            dataModel.setTestUnits(testUnits[i]);
-            tests.add(dataModel);
-        }
+//        for(int i =0;i<testCodes.length;i++){
+//            DataModel dataModel = new DataModel();
+//            dataModel.setTestName(testCodes[i]);
+//            dataModel.setTestUnits(testUnits[i]);
+//            tests.add(dataModel);
+//        }
+        tests = (ArrayList<DataModel>) getArguments().getSerializable("tests");
         createRecycleViewer(recyclerView, tests);
 
     }
@@ -92,7 +93,7 @@ public class ResultInformation extends BottomSheetDialogFragment {
         }
     }
 
-    private void createRecycleViewer(RecyclerView recyclerView, ArrayList<DataModel> tests) {
+    public void createRecycleViewer(RecyclerView recyclerView, ArrayList<DataModel> tests) {
         ResultsAdapter mAdapter = new ResultsAdapter(getContext(), tests);
 
         LinearLayoutManager gridLayoutManager =
