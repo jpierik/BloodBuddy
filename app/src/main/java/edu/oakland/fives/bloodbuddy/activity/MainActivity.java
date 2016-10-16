@@ -150,12 +150,19 @@ public class MainActivity extends AppCompatActivity {
 //                +tests.get(1).getValue()+"\nThe data you entered for "+tests.get(2).getTestName()+" is "
 //                +tests.get(2).getValue(), Toast.LENGTH_LONG).show();
 
-        TestValueAnalysis valueAnalysis = new TestValueAnalysis(tests);
+        ArrayList<DataModel> userTests = new ArrayList<>();
+        for (DataModel dataModel : tests) {
+            if (dataModel.getUserInput() == true) {
+                userTests.add(dataModel);
+            }
+        }
+
+        TestValueAnalysis valueAnalysis = new TestValueAnalysis(userTests);
         valueAnalysis.analysis();
 
         BottomSheetDialogFragment bottomSheetDialogFragment = new ResultInformation();
         Bundle bundle = new Bundle();
-        bundle.putSerializable("tests", tests);
+        bundle.putSerializable("tests", userTests);
         bottomSheetDialogFragment.setArguments(bundle);
         bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
     }

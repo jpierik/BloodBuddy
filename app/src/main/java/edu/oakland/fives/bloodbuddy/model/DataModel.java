@@ -14,6 +14,7 @@ public class DataModel implements Serializable {
     private String analysis;
     private int range;
     private double value;
+    private boolean userInput;
 
     public DataModel() {
     }
@@ -54,4 +55,7 @@ public class DataModel implements Serializable {
 
     public void setRange(int range) { this.range = range; }
     public int getRange() { return this.range; }
+
+    public void setUserInput(boolean userInput) { this.userInput = userInput; }
+    public boolean getUserInput() { return this.userInput; }
 }

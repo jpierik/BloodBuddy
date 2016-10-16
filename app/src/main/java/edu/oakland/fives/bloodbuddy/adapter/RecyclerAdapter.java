@@ -79,9 +79,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
                     if(!s.equals("")){
                         Double ans = Double.parseDouble(s.toString());
                         tests.get(position).setValue(ans);
+                        tests.get(position).setUserInput(true);
                     }
                 }catch (Exception e){
-                    tests.get(position).setValue(0);
+                    tests.get(position).setUserInput(false);
                 }
 
 
