@@ -11,6 +11,8 @@ import java.io.Serializable;
 public class DataModel implements Serializable {
     private String testName;
     private String testUnits;
+    private String analysis;
+    private int range;
     private double value;
 
     public DataModel() {
@@ -46,4 +48,10 @@ public class DataModel implements Serializable {
     public void setValue(double val) {
         this.value = val;
     }
+
+    public void setAnalysis(String analysis) { this.analysis = analysis; }
+    public String getAnalysis() { return this.analysis; }
+
+    public void setRange(int range) { this.range = range; }
+    public int getRange() { return this.range; }
 }
