@@ -12,6 +12,7 @@ public class TestValueAnalysis {
         this.test = test;
     }
 
+    // this is just for testing
     public void printTestArray() {
         for (DataModel value : this.test) {
             System.out.println(value.getTestName());
@@ -19,5 +20,7 @@ public class TestValueAnalysis {
             System.out.println(" -------- ");
         }
     }
+
+    public
 
 }
