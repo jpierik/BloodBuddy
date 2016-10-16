@@ -22,6 +22,8 @@
         <item name="colorPrimary">@android:color/transparent</item>
         <item name="colorPrimaryDark">@color/amber_600</item>
     </style>
-
+    <style name="AppTheme.WhiteAccent">
+        <item name="colorAccent">@color/red_500</item> <!-- Whatever color you want-->
+    </style>
 
 </resources>
