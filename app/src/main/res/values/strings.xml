@@ -36,5 +36,23 @@
             lungs to the rest of the body. They also carry carbon dioxide back to the lungs
             so it can be exhaled. If the RBC count is low (anemia), the body may not be getting the oxygen it needs. If the count is too high (a condition called polycythemia), there is a chance that the red blood cells will clump together and block tiny blood vessels (capillaries). This also makes it hard for your red blood cells to carry oxygen. Red blood cells carry oxygen from the lungs to the rest of the body. They also carry carbon dioxide back to the lungs so it can be exhaled. If the RBC count is low (anemia), the body may not be getting the oxygen it needs. If the count is too high (a condition called polycythemia), there is a chance that the red blood cells will
             clump together and block tiny blood vessels (capillaries). This also makes it hard for your red blood cells to carry oxygen.</item>
+        <item>HGB Description</item>
+        <item>HTC Description</item>
+        <item>MCV Description</item>
+        <item>MCH Description</item>
+        <item>MCHC Description</item>
+        <item>RDW Description</item>
+        <item>PLT Description</item>
+        <item>MPV Description</item>
+        <item>NEUT % Description</item>
+        <item>LYMPH % Description</item>
+        <item>MONO % Description</item>
+        <item>EOS % Description</item>
+        <item>BASO % Description</item>
+        <item>NEUT,ABS Description</item>
+        <item>LYMPH,ABS Description</item>
+        <item>MONO,ABS Description</item>
+        <item>EOS,ABS Description</item>
+        <item>BASO,ABS Description</item>
     </string-array>
 </resources>
