@@ -36,12 +36,35 @@
             lungs to the rest of the body. They also carry carbon dioxide back to the lungs
             so it can be exhaled. If the RBC count is low (anemia), the body may not be getting the oxygen it needs. If the count is too high (a condition called polycythemia), there is a chance that the red blood cells will clump together and block tiny blood vessels (capillaries). This also makes it hard for your red blood cells to carry oxygen. Red blood cells carry oxygen from the lungs to the rest of the body. They also carry carbon dioxide back to the lungs so it can be exhaled. If the RBC count is low (anemia), the body may not be getting the oxygen it needs. If the count is too high (a condition called polycythemia), there is a chance that the red blood cells will
             clump together and block tiny blood vessels (capillaries). This also makes it hard for your red blood cells to carry oxygen.</item>
-        <item>HGB Description</item>
-        <item>HTC Description</item>
-        <item>MCV Description</item>
-        <item>MCH Description</item>
-        <item>MCHC Description</item>
-        <item>RDW Description</item>
+        <item>Hemoglobin is the protein that enables oxygen to bind to red blood cells. This protein
+            gives red cells their characteristic color. Without hemoglobin, red cells cannot do their
+            job of bringing oxygen around the body. One can have a high amount of red cells and still
+            have diminished oxygen carrying capacity if there is little hemoglobin in the body. This
+            value is tested for due to the need to know the status of ones oxygen carrying capacity.
+            This value often correlates to RBC levels.</item>
+        <item>A hematocrit measures the percentage of whole blood that is made up of red cells. Whole
+            blood is made up of red blood cells, various types of white blood cells, platelets, and
+            plasma. Plasma is the amber fluid in which your blood cells are suspended. Plasma is
+            usually invisible due to the high amount of red cells that obscure amber color of the
+            plasma. When blood is spun through a centrifuge, the plasma becomes visible. The test
+            is done as a quick way to evaluate the ratio between red cells to the rest of the blood. </item>
+        <item>MCV measures the average volume of red cells or how large or small your red cells are.
+            When one has cells that are too large or too small, this can correlate to other health
+            conditions. When cells are too large, they are known as macrocytic and when cells are
+            too small they are known as microcytic. Cells being too large or small are problematic
+            because it can skew important measurements such as hemoglobin or hematocrit measurements.
+            Value can be roughly calculated by diciding Hct by RBC count. This value should mirror
+            mean corpuscular hemoglobin (MCH). </item>
+        <item>MCH measures the average weight of hemoglobin in an individual red cell. This is in
+            contrast to Hgb which measures total hemoglobin in the body. This value can be roughly
+            calculated by dividing Hgb by the RBC count and converting to appropriate units. </item>
+        <item>Mean cell hemoglobin concentration is a measure of the average concentration of
+            hemoglobin in each cell. Hemoglobin is the molecule that carries oxygen throughout the
+            body. If cells do not have the appropriate amount of hemoglobin, oxygen does not get to
+            where it needs to be. </item>
+        <item>The red cell distribution width is not always reported, but it is used when a physician
+            wants to know the uniformity of the size of a patients red blood cells. Red cells that
+            have great variation in their size can indicate more serious health conditions. </item>
         <item>PLT Description</item>
         <item>MPV Description</item>
         <item>NEUT % Description</item>
