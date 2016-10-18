@@ -51,17 +51,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getTheme().applyStyle(R.style.MyRandomTheme, true);
+        //getTheme().applyStyle(R.style.MyRandomTheme, true);
         setContentView(R.layout.activity_main);
         button = (Button)findViewById(R.id.button);
 
 
-        getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-// | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
-// | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
-                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+//        getWindow().getDecorView().setSystemUiVisibility(
+//                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+//                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+//// | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+//// | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
+//                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         //start app intro
          startAppIntro();
 
@@ -88,31 +88,31 @@ public class MainActivity extends AppCompatActivity {
         //attach touch listener to recycle view itmes
         addTouchListenerToRecyclerView(recyclerView, tests);
 
-        button.setOnTouchListener( new View.OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_UP:
-                        Log.v("tag", "end long click");
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                            getWindow().setStatusBarColor(getResources().getColor(R.color.amber_600));
-                        }
-                        break;
-                    case MotionEvent.ACTION_DOWN:
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                            getWindow().setStatusBarColor(getResources().getColor(android.R.color.transparent));
-                        }
-                        Log.v("tag", "start long click");
-                        break;
-                    default:
-                        break;
-                }
-
-                return false;
-            }
-        });
+//        button.setOnTouchListener( new View.OnTouchListener() {
+//
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//
+//                switch (event.getAction()) {
+//                    case MotionEvent.ACTION_UP:
+//                        Log.v("tag", "end long click");
+//                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//                            getWindow().setStatusBarColor(getResources().getColor(R.color.amber_600));
+//                        }
+//                        break;
+//                    case MotionEvent.ACTION_DOWN:
+//                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//                            getWindow().setStatusBarColor(getResources().getColor(android.R.color.transparent));
+//                        }
+//                        Log.v("tag", "start long click");
+//                        break;
+//                    default:
+//                        break;
+//                }
+//
+//                return false;
+//            }
+//        });
     }
 
 
@@ -152,15 +152,22 @@ public class MainActivity extends AppCompatActivity {
                 userTests.add(dataModel);
             }
         }
+        if(userTests.size()>0){
+            TestValueAnalysis valueAnalysis = new TestValueAnalysis(userTests);
+            valueAnalysis.analysis();
 
-        TestValueAnalysis valueAnalysis = new TestValueAnalysis(userTests);
-        valueAnalysis.analysis();
+            BottomSheetDialogFragment bottomSheetDialogFragment = new ResultInformation();
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("tests", userTests);
+            bottomSheetDialogFragment.setArguments(bundle);
+            bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
+        }
+        else {
+            Toast.makeText(getApplicationContext(), "No data entered!", Toast.LENGTH_SHORT).show();
+        }
 
-        BottomSheetDialogFragment bottomSheetDialogFragment = new ResultInformation();
-        Bundle bundle = new Bundle();
-        bundle.putSerializable("tests", userTests);
-        bottomSheetDialogFragment.setArguments(bundle);
-        bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
+
+
     }
 
 

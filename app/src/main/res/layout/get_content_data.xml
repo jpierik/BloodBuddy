@@ -4,29 +4,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@color/yellow_700"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4">
+        android:layout_weight="4"
+        >
     </android.support.v7.widget.RecyclerView>
-
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="View Result"
+        android:text="Check Result"
         android:textColor="@color/cardview_light_background"
         android:textSize="18sp"
         android:id="@+id/button"
-        android:typeface="monospace"
         android:longClickable="true"
         android:onClick="getTheData"
-        android:background="@drawable/shape"
+        style="@style/Widget.AppCompat.Button.Colored"
+
+
         />
+
+
 
 </LinearLayout>

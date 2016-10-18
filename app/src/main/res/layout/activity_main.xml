@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context="edu.oakland.fives.bloodbuddy.activity.MainActivity">
 
 
         <include layout="@layout/get_content_data"
-            android:id="@+id/include" />
+            android:id="@+id/include"/>
+
+
 
 
 </android.support.design.widget.CoordinatorLayout>
