@@ -31,8 +31,30 @@ public class TestValueAnalysis {
                     }
                     break;
                 case "HGB":
+                    if (dataModel.getValue() < 13){
+                        dataModel.setRange(1);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    }
+                    else if (dataModel.getValue() > 16.5) {
+                        dataModel.setRange(3);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    } else {
+                        dataModel.setRange(2);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    }
                     break;
                 case "HCT":
+                    if (dataModel.getValue() < 13){
+                        dataModel.setRange(1);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    }
+                    else if (dataModel.getValue() > 16.5) {
+                        dataModel.setRange(3);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    } else {
+                        dataModel.setRange(2);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    }
                     break;
                 case "MCV":
                     break;
