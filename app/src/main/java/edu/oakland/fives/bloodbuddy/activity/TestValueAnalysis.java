@@ -31,16 +31,82 @@ public class TestValueAnalysis {
                     }
                     break;
                 case "HGB":
+                    if (dataModel.getValue() < 13){
+                        dataModel.setRange(1);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    }
+                    else if (dataModel.getValue() > 16.5) {
+                        dataModel.setRange(3);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    } else {
+                        dataModel.setRange(2);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    }
                     break;
                 case "HCT":
+                    if (dataModel.getValue() < 37.5){
+                        dataModel.setRange(1);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    }
+                    else if (dataModel.getValue() > 52) {
+                        dataModel.setRange(3);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    } else {
+                        dataModel.setRange(2);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    }
                     break;
                 case "MCV":
+                    if (dataModel.getValue() < 80){
+                        dataModel.setRange(1);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    }
+                    else if (dataModel.getValue() > 100) {
+                        dataModel.setRange(3);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    } else {
+                        dataModel.setRange(2);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    }
                     break;
                 case "MCH":
+                    if (dataModel.getValue() < 26){
+                        dataModel.setRange(1);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    }
+                    else if (dataModel.getValue() > 32) {
+                        dataModel.setRange(3);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    } else {
+                        dataModel.setRange(2);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    }
                     break;
                 case "MCHC":
+                    if (dataModel.getValue() < 32){
+                        dataModel.setRange(1);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    }
+                    else if (dataModel.getValue() > 36) {
+                        dataModel.setRange(3);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    } else {
+                        dataModel.setRange(2);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    }
                     break;
                 case "RDW":
+                    if (dataModel.getValue() < 11.5){
+                        dataModel.setRange(1);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    }
+                    else if (dataModel.getValue() > 14.5) {
+                        dataModel.setRange(3);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    } else {
+                        dataModel.setRange(2);
+                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                    }
                     break;
                 case "PLT":
                     break;
