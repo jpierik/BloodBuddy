@@ -8,6 +8,7 @@
     <string name="disclaimer_summary">This application has been built by college students for a project ect ect ect...</string>
 
     <string name="test_info">null</string>
+    <string name="check_result_button">Check Result</string>
     <string-array name="tests_array">
         <item>WBC</item>
         <item>RBC</item>
