@@ -5,7 +5,14 @@
     <string name="app_tutorial2">No worries! This app will explain everything you need!</string>
     <string name="app_intro2">Do you have any idea of what your blood work results really mean?</string>
     <string name="disclaimer_header">DISCLAIMER!</string>
-    <string name="disclaimer_summary">This application has been built by college students for a project ect ect ect...</string>
+    <string name="disclaimer_summary">By using this application, I agree to have knowledge of the following:
+I am aware that this application was created by students for a class project.
+I am aware that in no way is the information on this application a substitute for medical information obtained from visiting a medical professional.
+I am aware that this application is intended for informational purposes, and not to be used as sound medical advice.
+I am aware that this application has no support staff of medical professionals to assist with any medical questions.
+I am aware that if I choose to follow the information provided by this application, which may or may not be completey accurate, I
+do so assuming full responsibilities of the consequences that result.
+I will not hold the creators of this application responsible if any harm befalls on me as a result of misinformation from this application.t ect...</string>
 
     <string name="test_info">null</string>
     <string name="check_result_button">Check Result</string>
