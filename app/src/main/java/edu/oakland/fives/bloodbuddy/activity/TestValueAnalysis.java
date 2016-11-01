@@ -18,118 +18,118 @@ public class TestValueAnalysis {
                 case "WBC":
                     if (dataModel.getValue() < 11.5){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("White Blood Cell Test");
+                        dataModel.setAnalysis("White Blood Cell Test Low");
                     }
                     else if (dataModel.getValue() > 14.5) {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("White Blood Cell Test");
+                        dataModel.setAnalysis("White Blood Cell Test High");
                     } else {
                         dataModel.setRange(2);
-                        dataModel.setAnalysis("White Blood Cell Test");
+                        dataModel.setAnalysis("White Blood Cell Test Average");
                     }
                     break;
                 case "RBC":
                     if (dataModel.getValue() < 4.6) {
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Red Blood Cell Test");
+                        dataModel.setAnalysis("Red Blood Cell Test Low ");
                     }
                     else if (dataModel.getValue() > 6.0) {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Red Blood Cell Test");
+                        dataModel.setAnalysis("Red Blood Cell Test High");
                     } else {
                         dataModel.setRange(2);
-                        dataModel.setAnalysis("Red Blood Cell Test");
+                        dataModel.setAnalysis("Red Blood Cell Test Average");
                     }
                     break;
                 case "HGB":
                     if (dataModel.getValue() < 13){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("HGB Test Low");
                     }
                     else if (dataModel.getValue() > 16.5) {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("HGB Test High");
                     } else {
                         dataModel.setRange(2);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("HGB Test Average");
                     }
                     break;
                 case "HCT":
                     if (dataModel.getValue() < 37.5){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("HCT Test Low");
                     }
                     else if (dataModel.getValue() > 52) {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("HCT Test High");
                     } else {
                         dataModel.setRange(2);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("HCT Test Average");
                     }
                     break;
                 case "MCV":
                     if (dataModel.getValue() < 80){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("MCV Test Low");
                     }
                     else if (dataModel.getValue() > 100) {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("MCV Test High");
                     } else {
                         dataModel.setRange(2);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("MCV Test Average");
                     }
                     break;
                 case "MCH":
                     if (dataModel.getValue() < 26){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("MCH Test Low");
                     }
                     else if (dataModel.getValue() > 32) {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("MCH Test High");
                     } else {
                         dataModel.setRange(2);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("MCH Test Average");
                     }
                     break;
                 case "MCHC":
                     if (dataModel.getValue() < 32){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("MCHC Test Low");
                     }
                     else if (dataModel.getValue() > 36) {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("MCHC Test High");
                     } else {
                         dataModel.setRange(2);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("MCHC Test Average");
                     }
                     break;
                 case "RDW":
                     if (dataModel.getValue() < 11.5){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("RDW Test Low");
                     }
                     else if (dataModel.getValue() > 14.5) {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("RDW Test High");
                     } else {
                         dataModel.setRange(2);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("RDW Test Average");
                     }
                     break;
                 case "PLT":
                     if (dataModel.getValue() < 11.5){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("PLT Test Low");
                     }
                     else if (dataModel.getValue() > 14.5) {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("PLT Test High");
                     } else {
                         dataModel.setRange(2);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("PLT Test Average");
                     }
                     break;
                 case "MPV":
