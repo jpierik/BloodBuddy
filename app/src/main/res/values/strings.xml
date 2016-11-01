@@ -43,7 +43,10 @@ I will not hold the creators of this application responsible if any harm befalls
 
 
     <string-array name="testsInfo_array">
-        <item>WBC description</item>
+        <item>WBC stands for white blood cells. White blood cells have the function of protecting the
+            body from invaders like germs. Not having enough white blood cells can mean that a simple
+            speak of dust would kill you. There are millions of white blood cells around your body.
+            This test counts those white cells.</item>
         <item>RBC stands for Red Blood Cells. Red blood cells carry oxygen from the
             lungs to the rest of the body. They also carry carbon dioxide back to the lungs
             so it can be exhaled. If the RBC count is low (anemia), the body may not be getting the oxygen it needs. If the count is too high (a condition called polycythemia), there is a chance that the red blood cells will clump together and block tiny blood vessels (capillaries). This also makes it hard for your red blood cells to carry oxygen. Red blood cells carry oxygen from the lungs to the rest of the body. They also carry carbon dioxide back to the lungs so it can be exhaled. If the RBC count is low (anemia), the body may not be getting the oxygen it needs. If the count is too high (a condition called polycythemia), there is a chance that the red blood cells will
@@ -67,22 +70,51 @@ I will not hold the creators of this application responsible if any harm befalls
             because it can skew important measurements such as hemoglobin or hematocrit measurements.
             Value can be roughly calculated by diciding Hct by RBC count. This value should mirror
             mean corpuscular hemoglobin (MCH). </item>
-        <item>MCH measures the average weight of hemoglobin in an individual red cell. This is in
-            contrast to Hgb which measures total hemoglobin in the body. This value can be roughly
-            calculated by dividing Hgb by the RBC count and converting to appropriate units. </item>
-        <item>Mean cell hemoglobin concentration is a measure of the average concentration of
-            hemoglobin in each cell. Hemoglobin is the molecule that carries oxygen throughout the
-            body. If cells do not have the appropriate amount of hemoglobin, oxygen does not get to
-            where it needs to be. </item>
+        <item>MCH stands for mean cell hemoglobin and measures the average weight of hemoglobin in an
+            individual red cell. This is in contrast to Hgb which measures total hemoglobin in the body.
+            This value can be roughly calculated by dividing Hgb by the RBC count and converting to
+            appropriate units. </item>
+        <item>MCHC stands for mean cell hemoglobin concentrationMean cell hemoglobin concentration
+            is a measure of the average concentration of hemoglobin in each cell. Hemoglobin is the
+            molecule that carries oxygen throughout the body. If cells do not have the appropriate
+            amount of hemoglobin, oxygen does not get to where it needs to be. </item>
         <item>The red cell distribution width is not always reported, but it is used when a physician
             wants to know the uniformity of the size of a patients red blood cells. Red cells that
             have great variation in their size can indicate more serious health conditions. </item>
-        <item>PLT Description</item>
-        <item>MPV Description</item>
-        <item>NEUT % Description</item>
-        <item>LYMPH % Description</item>
-        <item>MONO % Description</item>
-        <item>EOS % Description</item>
+        <item>PLT stands for platelets. Platelets are little bits and pieces inside your blood that helop
+            your blood to clot. Without platelets, a simple cut could kill you. You would just keep bleeding
+            until you died. You can see this process at work when you get a cut. Your platelets are what
+            help you form a scab. </item>
+        <item>MPV stands for mean platelet volume. Platelet count is extremely important to your clotting,
+            but just as important is how big the platelets are. This test measures the average size of your
+            platelets.</item>
+        <item>NEUT % stands for neutrophil percentage. You may have learned in school that you have red blood cells and
+            white blood cells. What you may not have learned is that white blood cells are broken up further
+            into several types of white blood cells. Neutrophils are one type of white blood cell. If you think of your immune
+            system as an army, then you can think of neutrophils as the foot soldiers of the army. They are the most common white blood
+            cell, and they are seen most often at places where infections take place. How they work is they "eat"
+            the invading germs and self destruct with the invaders inside, killing the invaders. This parameter is the neutrophil
+            percentage rather than the amount of neutrophils total. This means that all white blood cell percentages should
+            add to 100.</item>
+        <item>LYMPH % stands for lymphocyte percentage. You may have learned in school that you have red blood cells and
+            white blood cells. What you may not have learned is that white blood cells are broken up further
+            into several types of white blood cells. Lymphocytes are a type of white blood cell. If you think of your immune
+            system as an army, then you can think of lymphocytes as the special forces. They are fewer in number, but they
+            provide vital services to your immune system. They differ in function from gathering intelligence on the enemy to
+            acting as a police force to seek out infected cells to telling your immune cells what to do. Without them, your immune
+            system could not function. The dreaded HIV virus attacks these cells, and that is why the disease is so deadly. </item>
+        <item>MONO % stands for monocyte percentage. You may have learned in school that you have red blood cells and
+            white blood cells. What you may not have learned is that white blood cells are broken up further
+            into several types of white blood cells. Monocytes are a type of white blood cell. They are also known by their common name,
+            the macrophage. If you think of your system, the system that protects your body from invaders, as an army, then you can
+            think of monocytes as the generals of the army. Monocytes have a wide variety of functions, but their primary function
+            is to call other white blood cells. They can perform some of the same functions as other white blood cells, but only they
+            can command the army. </item>
+        <item>EOS % stands for eosinophil percentage. You may have learned in school that you have red blood cells and
+            white blood cells. What you may not have learned is that white blood cells are broken up further
+            into several types of white blood cells. In the modern day, eosinophils seem not serve much of a function.
+            It is theorized that they are there to protect against parasites. In the modern world, very few people have parasites,
+            so these cells sometimes "over-react." Having a lot of eosinophils corresponds to having allergies. </item>
         <item>BASO % Description</item>
         <item>NEUT,ABS Description</item>
         <item>LYMPH,ABS Description</item>
