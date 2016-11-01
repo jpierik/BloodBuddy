@@ -107,12 +107,12 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.MyViewHo
                 break;
             case 2:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    holder.progressBar.setProgressTintList(ColorStateList.valueOf(Color.YELLOW));
+                    holder.progressBar.setProgressTintList(ColorStateList.valueOf(Color.GREEN));
                 }
                 break;
             case 3:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    holder.progressBar.setProgressTintList(ColorStateList.valueOf(Color.GREEN));
+                    holder.progressBar.setProgressTintList(ColorStateList.valueOf(Color.RED));
                 }
                 break;
         }

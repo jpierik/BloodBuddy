@@ -27,14 +27,14 @@ public class TestValueAnalysis {
             switch (dataModel.getTestName()) {
                 case "WBC":
                     if (dataModel.getValue() < 11.5){
-                        dataModel.setRange(2);
+                        dataModel.setRange(1);
                         dataModel.setAnalysis("White Blood Cell Test Low");
                     }
                     else if (dataModel.getValue() > 14.5) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("White Blood Cell Test High");
                     } else {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("White Blood Cell Test Average");
                     }
                     break;
@@ -45,11 +45,11 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("Red Blood Cell Test Low ");
                     }
                     else if (gender.matches("Male") &&dataModel.getValue() > 6.0) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("Red Blood Cell Test High");
                     }
                     else if (gender.matches("Male") && (dataModel.getValue() >= 4.6 && dataModel.getValue() <= 6.0)) {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("Red Blood Cell Test Average");
                     }
                     //Female Test values for rbc
@@ -58,11 +58,11 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("Red Blood Cell Test Low ");
                     }
                     else if (gender.matches("Female") &&dataModel.getValue() > 30) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("Red Blood Cell Test High");
                     }
                     else if (gender.matches("Female") && (dataModel.getValue() >= 20 || dataModel.getValue() <= 6.0)){
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("Red Blood Cell Test Average");
                     }
                     break;
@@ -77,13 +77,13 @@ public class TestValueAnalysis {
                                 " some cases anemia can be a symptom of more severe diseases. Please consult your doctor.");
                     }
                     else if (gender.matches("Male") && dataModel.getValue() > 16.5) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("Your hemoglobin is higher than the average person. This is usually not a big issue." +
                                 " Too much hemogobin is not a difficult problem for your body to solve. Give it some time, eat healthy," +
                                 "and the problem will usually sort itself out. ");
                     }
                     else if(gender.matches("Male") && (dataModel.getValue() >= 13 && dataModel.getValue() <= 16.5)) {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("Everything looks good. Your red blood cells have the right amount of hemoglobin to" +
                                 " do their job.");
                     }
@@ -97,11 +97,11 @@ public class TestValueAnalysis {
                                 " some cases, anemia can be a symptom of more severe diseases. Please consult your doctor.");
                     }
                     else if (gender.matches("Female") &&dataModel.getValue() > 30) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("HGB Test High");
                     }
                     else if (gender.matches("Female") && (dataModel.getValue() >= 20 && dataModel.getValue() <= 6.0)){
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("HGB Test Average");
                     }
                     break;
@@ -112,10 +112,10 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("HCT Test Low");
                     }
                     else if (gender.matches("Male") && dataModel.getValue() > 52) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("HCT Test High");
                     } else if(gender.matches("Male") && (dataModel.getValue() >= 37.5 && dataModel.getValue() <= 52)){
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("HCT Test Average");
                     }
                     //Female Test values for hct
@@ -124,11 +124,11 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("HCT Test Low ");
                     }
                     else if (gender.matches("Female") &&dataModel.getValue() > 30) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("HCT Test High");
                     }
                     else if (gender.matches("Female") && (dataModel.getValue() >= 20 && dataModel.getValue() <= 6.0)){
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("HCT Test Average");
                     }
                     break;
@@ -138,10 +138,10 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("MCV Test Low");
                     }
                     else if (dataModel.getValue() > 100) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("MCV Test High");
                     } else {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("MCV Test Average");
                     }
                     break;
@@ -151,10 +151,10 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("MCH Test Low");
                     }
                     else if (dataModel.getValue() > 32) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("MCH Test High");
                     } else {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("MCH Test Average");
                     }
                     break;
@@ -164,10 +164,10 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("MCHC Test Low");
                     }
                     else if (dataModel.getValue() > 36) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("MCHC Test High");
                     } else {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("MCHC Test Average");
                     }
                     break;
@@ -177,10 +177,10 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("RDW Test Low");
                     }
                     else if (dataModel.getValue() > 14.5) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("RDW Test High");
                     } else {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("RDW Test Average");
                     }
                     break;
@@ -196,7 +196,7 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("PLT Test High");
                     }
                     else if (gender.matches("Male") && (dataModel.getValue() >= 20 && dataModel.getValue() <= 6.0)){
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("PLT Test Average");
                     }
                     //Female Test values for PLT
@@ -205,11 +205,11 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("PLT Test Low ");
                     }
                     else if (gender.matches("Female") &&dataModel.getValue() > 30) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("PLT Test High");
                     }
                     else if (gender.matches("Female") && (dataModel.getValue() >= 20 && dataModel.getValue() <= 6.0)){
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("PLT Test Average");
                     }
                     break;
@@ -219,10 +219,10 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("MPV Test Low ");
                     }
                     else if (dataModel.getValue() > 10.2) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("MPV Test High");
                     } else {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("MPV Test Average");
                     }
                     break;
@@ -232,10 +232,10 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("NEUT % Test Low");
                     }
                     else if (dataModel.getValue() > 70) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("NEUT % Test High");
                     } else {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("NEUT % Test Average");
                     }
                     break;
@@ -245,12 +245,12 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("LYMPH % Test Low");
                     }
                     else if (dataModel.getValue() > 42) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
 
                         dataModel.setAnalysis("LYMPH % Test High ");
                     }
                     else {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("LYMPH % Test Average");
                     }
                     break;
@@ -260,11 +260,11 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("MONO % Test Low ");
                     }
                     else if (dataModel.getValue() > 11) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("MONO % Test High");
                     }
                     else {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("MONO % Test Average");
                     }
                     break;
@@ -274,10 +274,10 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("EOS % Test Low");
                     }
                     else if (dataModel.getValue() > 3) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("EOS % Test High");
                     } else {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("EOS % Test Average");
                     }
                     break;
@@ -287,12 +287,12 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("BASO % Test Low");
                     }
                     else if (dataModel.getValue() > 2) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
 
                         dataModel.setAnalysis("BASO % Test High");
                     }
                     else {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("BASO % Test Average");
                     }
                     break;
@@ -302,11 +302,11 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("NEUT,ABS Test Low");
                     }
                     else if (dataModel.getValue() > 8.1) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("NEUT,ABS Test High");
                     }
                     else {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("NEUT,ABS Test Average");
                     }
                     break;
@@ -316,11 +316,11 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("LYMPH,ABS Test Low");
                     }
                     else if (dataModel.getValue() > 4.8) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("LYMPH,ABS Test High");
                     }
                     else {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("LYMPH,ABS Test Average");
                     }
                     break;
@@ -330,11 +330,11 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("MONO,ABS Test Low");
                     }
                     else if (dataModel.getValue() > 1.3) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("MONO,ABS Test High");
                     }
                     else {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("MONO,ABS Test Average");
                     }
                     break;
@@ -344,10 +344,10 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("EOS,ABS Test Low");
                     }
                     else if (dataModel.getValue() > 0.4) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("EOS,ABS Test High");
                     } else {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("EOS,ABS Test Average");
                     }
                     break;
@@ -357,11 +357,11 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("BASO,ABS Test Low");
                     }
                     else if (dataModel.getValue() > 0.1) {
-                        dataModel.setRange(1);
+                        dataModel.setRange(3);
 
                         dataModel.setAnalysis("BASO,ABS Test High");
                     } else {
-                        dataModel.setRange(3);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("BASO,ABS Test Average");
                     }
                     break;

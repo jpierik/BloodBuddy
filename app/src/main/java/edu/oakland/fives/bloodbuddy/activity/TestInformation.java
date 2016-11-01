@@ -42,6 +42,7 @@ public class TestInformation extends BottomSheetDialogFragment {
         try {
             textviewNames.setText(testnames[position]);
             textviewInfo.setText(testInfo[position]);
+            
 
         }catch (Exception exception){
 
