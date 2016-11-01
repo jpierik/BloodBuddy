@@ -41,14 +41,19 @@ public class TestValueAnalysis {
                 case "RBC":
                     if (dataModel.getValue() < 4.6) {
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Red Blood Cell Test Low ");
+                        dataModel.setAnalysis("Red Blood Cell Test Low. This means that you have fewer" +
+                                " red blood cells than the average person. Red cells carry oxygen, so your body has" +
+                                " less ability to carry oxygen.");
                     }
                     else if (dataModel.getValue() > 6.0) {
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Red Blood Cell Test High");
+                        dataModel.setAnalysis("You have a lot of red blood cells. This normally is not a cause for concern" +
+                                " because your body can normally adjust very easily. Red cells carry oxygen, so your body " +
+                                "has an increased ability to carry oxygen around the body. This does not necessarily mean this is a" +
+                                "good thing. Lots of red blood cells may or may not indicate more serious health complications.");
                     } else {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Red Blood Cell Test Average");
+                        dataModel.setAnalysis("Your ");
                     }
                     break;
                 case "HGB":
