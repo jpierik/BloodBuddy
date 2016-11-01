@@ -3,6 +3,8 @@ package edu.oakland.fives.bloodbuddy.activity;
 
 import android.animation.ValueAnimator;
 import android.app.ActivityManager;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -11,11 +13,13 @@ import android.os.Build;
 import android.preference.PreferenceManager;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomSheetDialogFragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -69,6 +73,9 @@ public class MainActivity extends AppCompatActivity {
 //                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         //start app intro
          startAppIntro();
+        
+        //show discliamer
+        showDialog(0);
 
         //create recyclerview
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -232,6 +239,25 @@ public class MainActivity extends AppCompatActivity {
 
         // Start the thread
         t.start();
+    }
+    protected Dialog onCreateDialog(int id){
+        // show disclaimer....
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("LEGAL DISCLAIMER:").setMessage(getResources().getString(R.string.disclaimer_summary)).setView(LayoutInflater.from(this).inflate(R.layout.disclaimer_dialog,null))
+                .setCancelable(false)
+                .setPositiveButton("Agree", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //accept
+                    }
+                })
+                .setNegativeButton("Disagree", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //exit
+                        System.exit(0);
+                    }
+                });
+        AlertDialog alert = builder.create();
+        return alert;
     }
 
 
