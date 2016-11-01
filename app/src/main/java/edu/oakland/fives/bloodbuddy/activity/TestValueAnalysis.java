@@ -70,20 +70,31 @@ public class TestValueAnalysis {
                     //Male Test values for hgb
                     if (gender.matches("Male") && dataModel.getValue() < 13){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("HGB Test Low");
+                        dataModel.setAnalysis("Your hemoglobin is low. Recall that hemoglobin is the chemical that helps" +
+                                " your red cells carry oxygen. Low hemoglobin means that your red cells cannot do their job." +
+                                " This is a condition called anemia. It may sound scary, but anemia can come from many sources," +
+                                " and not all of them are diseases. For example, you may not be eating enough healthy foods. In" +
+                                " some cases anemia can be a symptom of more severe diseases. Please consult your doctor.");
                     }
                     else if (gender.matches("Male") && dataModel.getValue() > 16.5) {
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("HGB Test High");
+                        dataModel.setAnalysis("Your hemoglobin is higher than the average person. This is usually not a big issue." +
+                                " Too much hemogobin is not a difficult problem for your body to solve. Give it some time, eat healthy," +
+                                "and the problem will usually sort itself out. ");
                     }
                     else if(gender.matches("Male") && (dataModel.getValue() >= 13 && dataModel.getValue() <= 16.5)) {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("HGB Test Average");
+                        dataModel.setAnalysis("Everything looks good. Your red blood cells have the right amount of hemoglobin to" +
+                                " do their job.");
                     }
                     //Female Test values for hgb
                     else if (gender.matches("Female") && dataModel.getValue() < 20) {
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("HGB Test Low ");
+                        dataModel.setAnalysis("Your hemoglobin is low. Recall that hemoglobin is the chemical that helps" +
+                                " your red cells carry oxygen. Low hemoglobin means that your red cells cannot do their job." +
+                                " This is a condition called anemia. It may sound scary, but anemia can come from many sources," +
+                                " and not all of them are diseases. For example, you may not be eating enough healthy foods. In" +
+                                " some cases, anemia can be a symptom of more severe diseases. Please consult your doctor.");
                     }
                     else if (gender.matches("Female") &&dataModel.getValue() > 30) {
                         dataModel.setRange(1);
