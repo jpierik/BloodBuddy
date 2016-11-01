@@ -22,6 +22,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.OvershootInterpolator;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
             "Thousands/uL", "Thousands/uL"};
     private ArrayList<DataModel> tests;
     Button button;
+    private RadioGroup radioGroupGender;
+    private RadioButton radioGenderButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
         //getTheme().applyStyle(R.style.MyRandomTheme, true);
         setContentView(R.layout.activity_main);
         button = (Button)findViewById(R.id.button);
+        radioGroupGender = (RadioGroup)findViewById(R.id.radioGroupGender);
+
 
 
 //        getWindow().getDecorView().setSystemUiVisibility(
@@ -144,7 +150,10 @@ public class MainActivity extends AppCompatActivity {
 
     //test method to make sure values are collected correctly
     public void getTheData(View view) {
+        radioGroupGender = (RadioGroup) findViewById(R.id.radioGroupGender);
+        int selectedGenderID = radioGroupGender.getCheckedRadioButtonId();
 
+        radioGenderButton = (RadioButton)findViewById(selectedGenderID);
 
         ArrayList<DataModel> userTests = new ArrayList<>();
         for (DataModel dataModel : tests) {
@@ -153,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         if(userTests.size()>0){
-            TestValueAnalysis valueAnalysis = new TestValueAnalysis(userTests);
+            TestValueAnalysis valueAnalysis = new TestValueAnalysis(getApplicationContext(),userTests, radioGenderButton.getText().toString());
             valueAnalysis.analysis();
 
             BottomSheetDialogFragment bottomSheetDialogFragment = new ResultInformation();
