@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<DataModel> tests;
     Button button;
     private RadioGroup radioGroupGender;
-    private RadioButton radioGenderButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -153,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
         radioGroupGender = (RadioGroup) findViewById(R.id.radioGroupGender);
         int selectedGenderID = radioGroupGender.getCheckedRadioButtonId();
 
-        radioGenderButton = (RadioButton)findViewById(selectedGenderID);
+        RadioButton radioGenderButton = (RadioButton) findViewById(selectedGenderID);
 
         ArrayList<DataModel> userTests = new ArrayList<>();
         for (DataModel dataModel : tests) {
