@@ -1,18 +1,28 @@
 package edu.oakland.fives.bloodbuddy.activity;
 
+import android.content.Context;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 
 import edu.oakland.fives.bloodbuddy.model.DataModel;
 
 public class TestValueAnalysis {
 
-    ArrayList<DataModel> tests;
+    private ArrayList<DataModel> tests;
+    private String gender;
+    private Context context;
 
-    public TestValueAnalysis(ArrayList<DataModel> tests) {
+    public TestValueAnalysis(Context context, ArrayList<DataModel> tests, String gender) {
         this.tests = tests;
+        this.gender=gender;
+        this.context=context;
     }
 
     public void analysis() {
+
+        Toast.makeText(context,""+gender, Toast.LENGTH_LONG).show();
+
         for (DataModel dataModel : this.tests) {
             switch (dataModel.getTestName()) {
                 case "WBC":
