@@ -20,14 +20,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="10dp"
-        app:cardCornerRadius="3dp"
-        android:elevation="20dp">
+        app:cardCornerRadius="3dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <RadioGroup
-            android:id="@+id/radioSex"
+            android:id="@+id/radioGroupGender"
             android:layout_width="0dp"
             android:layout_weight="2"
             android:layout_gravity="center"
@@ -48,6 +48,7 @@
                 android:text="@string/radio_female" />
 
         </RadioGroup>
+
         <Button
             android:layout_width="0dp"
             android:layout_height="60dp"
@@ -63,15 +64,7 @@
 
 
             />
-
-
-        <!--<Switch-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="1"-->
-            <!--android:text="Male"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:gravity="center"/>-->
+        
     </LinearLayout>
 
 
