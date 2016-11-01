@@ -9,6 +9,8 @@
 
     <string name="test_info">null</string>
     <string name="check_result_button">Check Result</string>
+    <string name="radio_male">Male</string>
+    <string name="radio_female">Female</string>
     <string-array name="tests_array">
         <item>WBC</item>
         <item>RBC</item>
