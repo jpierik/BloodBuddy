@@ -21,10 +21,10 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("White Blood Cell Test Low");
                     }
                     else if (dataModel.getValue() > 14.5) {
-                        dataModel.setRange(3);
+                        dataModel.setRange(1);
                         dataModel.setAnalysis("White Blood Cell Test High");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("White Blood Cell Test Average");
                     }
                     break;
@@ -34,10 +34,10 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("Red Blood Cell Test Low ");
                     }
                     else if (dataModel.getValue() > 6.0) {
-                        dataModel.setRange(3);
+                        dataModel.setRange(1);
                         dataModel.setAnalysis("Red Blood Cell Test High");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("Red Blood Cell Test Average");
                     }
                     break;
@@ -47,10 +47,10 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("HGB Test Low");
                     }
                     else if (dataModel.getValue() > 16.5) {
-                        dataModel.setRange(3);
+                        dataModel.setRange(1);
                         dataModel.setAnalysis("HGB Test High");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("HGB Test Average");
                     }
                     break;
@@ -60,10 +60,10 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("HCT Test Low");
                     }
                     else if (dataModel.getValue() > 52) {
-                        dataModel.setRange(3);
+                        dataModel.setRange(1);
                         dataModel.setAnalysis("HCT Test High");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("HCT Test Average");
                     }
                     break;
@@ -73,10 +73,10 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("MCV Test Low");
                     }
                     else if (dataModel.getValue() > 100) {
-                        dataModel.setRange(3);
+                        dataModel.setRange(1);
                         dataModel.setAnalysis("MCV Test High");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("MCV Test Average");
                     }
                     break;
@@ -86,10 +86,10 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("MCH Test Low");
                     }
                     else if (dataModel.getValue() > 32) {
-                        dataModel.setRange(3);
+                        dataModel.setRange(1);
                         dataModel.setAnalysis("MCH Test High");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("MCH Test Average");
                     }
                     break;
@@ -99,10 +99,10 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("MCHC Test Low");
                     }
                     else if (dataModel.getValue() > 36) {
-                        dataModel.setRange(3);
+                        dataModel.setRange(1);
                         dataModel.setAnalysis("MCHC Test High");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("MCHC Test Average");
                     }
                     break;
@@ -112,10 +112,10 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("RDW Test Low");
                     }
                     else if (dataModel.getValue() > 14.5) {
-                        dataModel.setRange(3);
+                        dataModel.setRange(1);
                         dataModel.setAnalysis("RDW Test High");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("RDW Test Average");
                     }
                     break;
@@ -124,11 +124,16 @@ public class TestValueAnalysis {
                         dataModel.setRange(1);
                         dataModel.setAnalysis("PLT Test Low");
                     }
+<<<<<<< HEAD
                     else if (dataModel.getValue() > 450) {
                         dataModel.setRange(3);
+=======
+                    else if (dataModel.getValue() > 14.5) {
+                        dataModel.setRange(1);
+>>>>>>> origin/BetaApp2
                         dataModel.setAnalysis("PLT Test High");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("PLT Test Average");
                     }
                     break;
@@ -137,11 +142,16 @@ public class TestValueAnalysis {
                         dataModel.setRange(1);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
+<<<<<<< HEAD
                     else if (dataModel.getValue() > 10.2) {
                         dataModel.setRange(3);
+=======
+                    else if (dataModel.getValue() > 14.5) {
+                        dataModel.setRange(1);
+>>>>>>> origin/BetaApp2
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
                     break;
@@ -150,11 +160,16 @@ public class TestValueAnalysis {
                         dataModel.setRange(1);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
+<<<<<<< HEAD
                     else if (dataModel.getValue() > 70) {
                         dataModel.setRange(3);
+=======
+                    else if (dataModel.getValue() > 14.5) {
+                        dataModel.setRange(1);
+>>>>>>> origin/BetaApp2
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
                     break;
@@ -163,11 +178,16 @@ public class TestValueAnalysis {
                         dataModel.setRange(1);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
+<<<<<<< HEAD
                     else if (dataModel.getValue() > 42) {
                         dataModel.setRange(3);
+=======
+                    else if (dataModel.getValue() > 14.5) {
+                        dataModel.setRange(1);
+>>>>>>> origin/BetaApp2
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
                     break;
@@ -176,11 +196,16 @@ public class TestValueAnalysis {
                         dataModel.setRange(1);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
+<<<<<<< HEAD
                     else if (dataModel.getValue() > 11) {
                         dataModel.setRange(3);
+=======
+                    else if (dataModel.getValue() > 14.5) {
+                        dataModel.setRange(1);
+>>>>>>> origin/BetaApp2
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
                     break;
@@ -189,11 +214,16 @@ public class TestValueAnalysis {
                         dataModel.setRange(1);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
+<<<<<<< HEAD
                     else if (dataModel.getValue() > 3) {
                         dataModel.setRange(3);
+=======
+                    else if (dataModel.getValue() > 14.5) {
+                        dataModel.setRange(1);
+>>>>>>> origin/BetaApp2
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
                     break;
@@ -202,11 +232,16 @@ public class TestValueAnalysis {
                         dataModel.setRange(1);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
+<<<<<<< HEAD
                     else if (dataModel.getValue() > 2) {
                         dataModel.setRange(3);
+=======
+                    else if (dataModel.getValue() > 14.5) {
+                        dataModel.setRange(1);
+>>>>>>> origin/BetaApp2
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
                     break;
@@ -215,11 +250,16 @@ public class TestValueAnalysis {
                         dataModel.setRange(1);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
+<<<<<<< HEAD
                     else if (dataModel.getValue() > 8.1) {
                         dataModel.setRange(3);
+=======
+                    else if (dataModel.getValue() > 14.5) {
+                        dataModel.setRange(1);
+>>>>>>> origin/BetaApp2
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
                     break;
@@ -228,11 +268,16 @@ public class TestValueAnalysis {
                         dataModel.setRange(1);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
+<<<<<<< HEAD
                     else if (dataModel.getValue() > 4.8) {
                         dataModel.setRange(3);
+=======
+                    else if (dataModel.getValue() > 14.5) {
+                        dataModel.setRange(1);
+>>>>>>> origin/BetaApp2
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
                     break;
@@ -241,11 +286,16 @@ public class TestValueAnalysis {
                         dataModel.setRange(1);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
+<<<<<<< HEAD
                     else if (dataModel.getValue() > 1.3) {
                         dataModel.setRange(3);
+=======
+                    else if (dataModel.getValue() > 14.5) {
+                        dataModel.setRange(1);
+>>>>>>> origin/BetaApp2
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
                     break;
@@ -254,11 +304,16 @@ public class TestValueAnalysis {
                         dataModel.setRange(1);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
+<<<<<<< HEAD
                     else if (dataModel.getValue() > 0.4) {
                         dataModel.setRange(3);
+=======
+                    else if (dataModel.getValue() > 14.5) {
+                        dataModel.setRange(1);
+>>>>>>> origin/BetaApp2
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
                     break;
@@ -267,11 +322,16 @@ public class TestValueAnalysis {
                         dataModel.setRange(1);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
+<<<<<<< HEAD
                     else if (dataModel.getValue() > 0.1) {
                         dataModel.setRange(3);
+=======
+                    else if (dataModel.getValue() > 14.5) {
+                        dataModel.setRange(1);
+>>>>>>> origin/BetaApp2
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     } else {
-                        dataModel.setRange(2);
+                        dataModel.setRange(3);
                         dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
                     }
                     break;
