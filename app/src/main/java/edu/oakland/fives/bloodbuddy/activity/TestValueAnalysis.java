@@ -27,7 +27,7 @@ public class TestValueAnalysis {
             switch (dataModel.getTestName()) {
                 case "WBC":
                     if (dataModel.getValue() < 11.5){
-                        dataModel.setRange(1);
+                        dataModel.setRange(2);
                         dataModel.setAnalysis("White Blood Cell Test Low");
                     }
                     else if (dataModel.getValue() > 14.5) {
@@ -39,40 +39,84 @@ public class TestValueAnalysis {
                     }
                     break;
                 case "RBC":
-                    if (dataModel.getValue() < 4.6) {
+                    //Male test values for RBC
+                    if (gender.matches("Male") && dataModel.getValue() < 4.6) {
                         dataModel.setRange(1);
                         dataModel.setAnalysis("Red Blood Cell Test Low ");
                     }
-                    else if (dataModel.getValue() > 6.0) {
+                    else if (gender.matches("Male") &&dataModel.getValue() > 6.0) {
                         dataModel.setRange(1);
                         dataModel.setAnalysis("Red Blood Cell Test High");
-                    } else {
+                    }
+                    else if (gender.matches("Male") && (dataModel.getValue() >= 4.6 && dataModel.getValue() <= 6.0)) {
+                        dataModel.setRange(3);
+                        dataModel.setAnalysis("Red Blood Cell Test Average");
+                    }
+                    //Female Test values for rbc
+                    else if (gender.matches("Female") && dataModel.getValue() < 20) {
+                        dataModel.setRange(1);
+                        dataModel.setAnalysis("Red Blood Cell Test Low ");
+                    }
+                    else if (gender.matches("Female") &&dataModel.getValue() > 30) {
+                        dataModel.setRange(1);
+                        dataModel.setAnalysis("Red Blood Cell Test High");
+                    }
+                    else if (gender.matches("Female") && (dataModel.getValue() >= 20 || dataModel.getValue() <= 6.0)){
                         dataModel.setRange(3);
                         dataModel.setAnalysis("Red Blood Cell Test Average");
                     }
                     break;
                 case "HGB":
-                    if (dataModel.getValue() < 13){
+                    //Male Test values for hgb
+                    if (gender.matches("Male") && dataModel.getValue() < 13){
                         dataModel.setRange(1);
                         dataModel.setAnalysis("HGB Test Low");
                     }
-                    else if (dataModel.getValue() > 16.5) {
+                    else if (gender.matches("Male") && dataModel.getValue() > 16.5) {
                         dataModel.setRange(1);
                         dataModel.setAnalysis("HGB Test High");
-                    } else {
+                    }
+                    else if(gender.matches("Male") && (dataModel.getValue() >= 13 && dataModel.getValue() <= 16.5)) {
+                        dataModel.setRange(3);
+                        dataModel.setAnalysis("HGB Test Average");
+                    }
+                    //Female Test values for hgb
+                    else if (gender.matches("Female") && dataModel.getValue() < 20) {
+                        dataModel.setRange(1);
+                        dataModel.setAnalysis("HGB Test Low ");
+                    }
+                    else if (gender.matches("Female") &&dataModel.getValue() > 30) {
+                        dataModel.setRange(1);
+                        dataModel.setAnalysis("HGB Test High");
+                    }
+                    else if (gender.matches("Female") && (dataModel.getValue() >= 20 && dataModel.getValue() <= 6.0)){
                         dataModel.setRange(3);
                         dataModel.setAnalysis("HGB Test Average");
                     }
                     break;
                 case "HCT":
-                    if (dataModel.getValue() < 37.5){
+                    //Male test values for hct
+                    if (gender.matches("Male") && dataModel.getValue() < 37.5){
                         dataModel.setRange(1);
                         dataModel.setAnalysis("HCT Test Low");
                     }
-                    else if (dataModel.getValue() > 52) {
+                    else if (gender.matches("Male") && dataModel.getValue() > 52) {
                         dataModel.setRange(1);
                         dataModel.setAnalysis("HCT Test High");
-                    } else {
+                    } else if(gender.matches("Male") && (dataModel.getValue() >= 37.5 && dataModel.getValue() <= 52)){
+                        dataModel.setRange(3);
+                        dataModel.setAnalysis("HCT Test Average");
+                    }
+                    //Female Test values for hct
+                    else if (gender.matches("Female") && dataModel.getValue() < 20) {
+                        dataModel.setRange(1);
+                        dataModel.setAnalysis("HCT Test Low ");
+                    }
+                    else if (gender.matches("Female") &&dataModel.getValue() > 30) {
+                        dataModel.setRange(1);
+                        dataModel.setAnalysis("HCT Test High");
+                    }
+                    else if (gender.matches("Female") && (dataModel.getValue() >= 20 && dataModel.getValue() <= 6.0)){
                         dataModel.setRange(3);
                         dataModel.setAnalysis("HCT Test Average");
                     }
@@ -130,19 +174,30 @@ public class TestValueAnalysis {
                     }
                     break;
                 case "PLT":
-                    if (dataModel.getValue() < 150){
+                    //Male test values for PLT
+                    if (gender.matches("Male") && dataModel.getValue() < 150){
                         dataModel.setRange(1);
                         dataModel.setAnalysis("PLT Test Low");
                     }
 
-                    else if (dataModel.getValue() > 450) {
+                    else if (gender.matches("Male") && dataModel.getValue() > 450) {
                         dataModel.setRange(3);
-                    }
-                    else if (dataModel.getValue() > 14.5) {
-                        dataModel.setRange(1);
-
                         dataModel.setAnalysis("PLT Test High");
-                    } else {
+                    }
+                    else if (gender.matches("Male") && (dataModel.getValue() >= 20 && dataModel.getValue() <= 6.0)){
+                        dataModel.setRange(3);
+                        dataModel.setAnalysis("PLT Test Average");
+                    }
+                    //Female Test values for PLT
+                    else if (gender.matches("Female") && dataModel.getValue() < 20) {
+                        dataModel.setRange(1);
+                        dataModel.setAnalysis("PLT Test Low ");
+                    }
+                    else if (gender.matches("Female") &&dataModel.getValue() > 30) {
+                        dataModel.setRange(1);
+                        dataModel.setAnalysis("PLT Test High");
+                    }
+                    else if (gender.matches("Female") && (dataModel.getValue() >= 20 && dataModel.getValue() <= 6.0)){
                         dataModel.setRange(3);
                         dataModel.setAnalysis("PLT Test Average");
                     }
