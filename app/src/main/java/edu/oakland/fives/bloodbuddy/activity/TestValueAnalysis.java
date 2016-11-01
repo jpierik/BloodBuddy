@@ -205,199 +205,153 @@ public class TestValueAnalysis {
                 case "MPV":
                     if (dataModel.getValue() < 6.8){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("MPV Test Low ");
                     }
-
                     else if (dataModel.getValue() > 10.2) {
-                        dataModel.setRange(3);
-                    }
-
-                    else if (dataModel.getValue() > 14.5) {
                         dataModel.setRange(1);
-
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("MPV Test High");
                     } else {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("MPV Test Average");
                     }
                     break;
                 case "NEUT %":
                     if (dataModel.getValue() < 50){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("NEUT % Test Low");
                     }
-
                     else if (dataModel.getValue() > 70) {
-                        dataModel.setRange(3);
-                    }
-                    else if (dataModel.getValue() > 14.5) {
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("NEUT % Test High");
                     } else {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("NEUT % Test Average");
                     }
                     break;
                 case "LYMPH %":
                     if (dataModel.getValue() < 18){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("LYMPH % Test Low");
                     }
-
                     else if (dataModel.getValue() > 42) {
-                        dataModel.setRange(3);
-                    }
-                    else if (dataModel.getValue() > 14.5) {
                         dataModel.setRange(1);
 
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
-                    } else {
+                        dataModel.setAnalysis("LYMPH % Test High ");
+                    }
+                    else {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("LYMPH % Test Average");
                     }
                     break;
                 case "MONO %":
                     if (dataModel.getValue() < 2){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("MONO % Test Low ");
                     }
-
                     else if (dataModel.getValue() > 11) {
-                        dataModel.setRange(3);
-                    }
-                    else if (dataModel.getValue() > 14.5) {
                         dataModel.setRange(1);
-
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
-                    } else {
+                        dataModel.setAnalysis("MONO % Test High");
+                    }
+                    else {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("MONO % Test Average");
                     }
                     break;
                 case "EOS %":
                     if (dataModel.getValue() < 1){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("EOS % Test Low");
                     }
-
                     else if (dataModel.getValue() > 3) {
-                        dataModel.setRange(3);
-                    }
-                    else if (dataModel.getValue() > 14.5) {
                         dataModel.setRange(1);
-
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("EOS % Test High");
                     } else {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("EOS % Test Average");
                     }
                     break;
                 case "BASO %":
                     if (dataModel.getValue() < 0){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("BASO % Test Low");
                     }
-
                     else if (dataModel.getValue() > 2) {
-                        dataModel.setRange(3);
-                    }
-                    else if (dataModel.getValue() > 14.5) {
                         dataModel.setRange(1);
 
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
-                    } else {
+                        dataModel.setAnalysis("BASO % Test High");
+                    }
+                    else {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("BASO % Test Average");
                     }
                     break;
                 case "NEUT,ABS":
                     if (dataModel.getValue() < 2.3){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("NEUT,ABS Test Low");
                     }
-
                     else if (dataModel.getValue() > 8.1) {
-                        dataModel.setRange(3);
-                    }
-                    else if (dataModel.getValue() > 14.5) {
                         dataModel.setRange(1);
-
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
-                    } else {
+                        dataModel.setAnalysis("NEUT,ABS Test High");
+                    }
+                    else {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("NEUT,ABS Test Average");
                     }
                     break;
                 case "LYMPH,ABS":
                     if (dataModel.getValue() < 0.8){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("LYMPH,ABS Test Low");
                     }
-
                     else if (dataModel.getValue() > 4.8) {
-                        dataModel.setRange(3);
-                    }
-                    else if (dataModel.getValue() > 14.5) {
                         dataModel.setRange(1);
-
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
-                    } else {
+                        dataModel.setAnalysis("LYMPH,ABS Test High");
+                    }
+                    else {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("LYMPH,ABS Test Average");
                     }
                     break;
                 case "MONO,ABS":
                     if (dataModel.getValue() < 0.45){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("MONO,ABS Test Low");
                     }
-
                     else if (dataModel.getValue() > 1.3) {
-                        dataModel.setRange(3);
-                    }
-                    else if (dataModel.getValue() > 14.5) {
                         dataModel.setRange(1);
-
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
-                    } else {
+                        dataModel.setAnalysis("MONO,ABS Test High");
+                    }
+                    else {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("MONO,ABS Test Average");
                     }
                     break;
                 case "EOS,ABS":
                     if (dataModel.getValue() < 0){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("EOS,ABS Test Low");
                     }
-
                     else if (dataModel.getValue() > 0.4) {
-                        dataModel.setRange(3);
-                    }
-                    else if (dataModel.getValue() > 14.5) {
                         dataModel.setRange(1);
-
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("EOS,ABS Test High");
                     } else {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("EOS,ABS Test Average");
                     }
                     break;
                 case "BASO,ABS":
                     if (dataModel.getValue() < 0){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("BASO,ABS Test Low");
                     }
-
                     else if (dataModel.getValue() > 0.1) {
-                        dataModel.setRange(3);
-                    }
-                    else if (dataModel.getValue() > 14.5) {
                         dataModel.setRange(1);
 
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("BASO,ABS Test High");
                     } else {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
+                        dataModel.setAnalysis("BASO,ABS Test Average");
                     }
                     break;
                 default:
