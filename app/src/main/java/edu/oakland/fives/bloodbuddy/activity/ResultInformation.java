@@ -5,12 +5,19 @@ package edu.oakland.fives.bloodbuddy.activity;
  */
 
 import android.app.Dialog;
+import android.content.DialogInterface;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.OvershootInterpolator;
+import android.widget.ImageView;
+
 import edu.oakland.fives.bloodbuddy.R;
 import java.util.ArrayList;
 import edu.oakland.fives.bloodbuddy.adapter.ResultsAdapter;
@@ -36,10 +43,30 @@ public class ResultInformation extends BottomSheetDialogFragment {
 
         //create recyclerview
         RecyclerView recyclerView = (RecyclerView) dialog.findViewById(R.id.recycler_view2);
-
+        final ImageView arrow = (ImageView) dialog.findViewById(R.id.arrow_up);
 
         ArrayList<DataModel> tests = (ArrayList<DataModel>) getArguments().getSerializable("tests");
         createRecycleViewer(recyclerView, tests);
+        final Animation anim = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in_out);
+        arrow.startAnimation(anim);
+
+
+        anim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                arrow.setVisibility(View.INVISIBLE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
 
     }
 
