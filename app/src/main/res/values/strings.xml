@@ -102,24 +102,60 @@ I will not hold the creators of this application responsible if any harm befalls
             system as an army, then you can think of lymphocytes as the special forces. They are fewer in number, but they
             provide vital services to your immune system. They differ in function from gathering intelligence on the enemy to
             acting as a police force to seek out infected cells to telling your immune cells what to do. Without them, your immune
-            system could not function. The dreaded HIV virus attacks these cells, and that is why the disease is so deadly. </item>
+            system could not function. The dreaded HIV virus attacks these cells, and that is why the disease is so deadly. This
+            test measures for the percentage of lymphocytes relative to the amount of other white cells in the body.</item>
         <item>MONO % stands for monocyte percentage. You may have learned in school that you have red blood cells and
             white blood cells. What you may not have learned is that white blood cells are broken up further
             into several types of white blood cells. Monocytes are a type of white blood cell. They are also known by their common name,
             the macrophage. If you think of your system, the system that protects your body from invaders, as an army, then you can
             think of monocytes as the generals of the army. Monocytes have a wide variety of functions, but their primary function
             is to call other white blood cells. They can perform some of the same functions as other white blood cells, but only they
-            can command the army. </item>
+            can command the army. This test measures the percentage of monocytes in the body relative to the amount of other white
+            blood cells. </item>
         <item>EOS % stands for eosinophil percentage. You may have learned in school that you have red blood cells and
             white blood cells. What you may not have learned is that white blood cells are broken up further
             into several types of white blood cells. In the modern day, eosinophils seem not serve much of a function.
             It is theorized that they are there to protect against parasites. In the modern world, very few people have parasites,
-            so these cells sometimes "over-react." Having a lot of eosinophils corresponds to having allergies. </item>
-        <item>BASO % Description</item>
-        <item>NEUT,ABS Description</item>
-        <item>LYMPH,ABS Description</item>
-        <item>MONO,ABS Description</item>
-        <item>EOS,ABS Description</item>
-        <item>BASO,ABS Description</item>
+            so these cells sometimes "over-react." Having a lot of eosinophils corresponds to having allergies. This test measures
+            the percentage of eosinophils relative to the amount of other white blood cells in the body.</item>
+        <item>BASO % stands for basophil percentage. You may have learned in school that you have red blood cells and
+            white blood cells. What you may not have learned is that white blood cells are broken up further
+            into several types of white blood cells. Basophils have been attributed to allergic reations but not as much as
+            eosinophils. They are primarily involved in helping the immune system function by releasing signals which activate
+            other cells. This test measures the percentage of basophils relative to the amount of other white cells in the body.
+            </item>
+        <item>NEUT,ABS stands for neutrophil absolute. You may have learned in school that you have red blood cells and
+            white blood cells. What you may not have learned is that white blood cells are broken up further
+            into several types of white blood cells. Neutrophils are one type of white blood cell. If you think of your immune
+            system as an army, then you can think of neutrophils as the foot soldiers of the army. They are the most common white blood
+            cell, and they are seen most often at places where infections take place. How they work is they "eat"
+            the invading germs and self destruct with the invaders inside, killing the invaders. This test measures the exact amount
+            of neutrophils in your body.</item>
+        <item>LYMPH,ABS stands for neutrophil absolute. You may have learned in school that you have red blood cells and
+            white blood cells. What you may not have learned is that white blood cells are broken up further
+            into several types of white blood cells. Lymphocytes are a type of white blood cell. If you think of your immune
+            system as an army, then you can think of lymphocytes as the special forces. They are fewer in number, but they
+            provide vital services to your immune system. They differ in function from gathering intelligence on the enemy to
+            acting as a police force to seek out infected cells to telling your immune cells what to do. Without them, your immune
+            system could not function. The dreaded HIV virus attacks these cells, and that is why the disease is so deadly.
+            This test measures the exact amount of lymphocytes in your body. </item>
+        <item>MONO,ABS stands for monocyte absolute. You may have learned in school that you have red blood cells and
+            white blood cells. What you may not have learned is that white blood cells are broken up further
+            into several types of white blood cells. Monocytes are a type of white blood cell. They are also known by their common name,
+            the macrophage. If you think of your system, the system that protects your body from invaders, as an army, then you can
+            think of monocytes as the generals of the army. Monocytes have a wide variety of functions, but their primary function
+            is to call other white blood cells. They can perform some of the same functions as other white blood cells, but only they
+            can command the army. This test measures the exact amount of monocytes in the body. </item>
+        <item>EOS,ABS stands for eosinophil absolute. You may have learned in school that you have red blood cells and
+            white blood cells. What you may not have learned is that white blood cells are broken up further
+            into several types of white blood cells. In the modern day, eosinophils seem not serve much of a function.
+            It is theorized that they are there to protect against parasites. In the modern world, very few people have parasites,
+            so these cells sometimes "over-react." Having a lot of eosinophils corresponds to having allergies. This test measures
+            for the exact or absolute amount of eosinophils in the body. </item>
+        <item>BASO,ABS stands for basophil absolute. You may have learned in school that you have red blood cells and
+            white blood cells. What you may not have learned is that white blood cells are broken up further
+            into several types of white blood cells. Basophils have been attributed to allergic reations but not as much as
+            eosinophils. They are primarily involved in helping the immune system function by releasing signals which activate
+            other cells. This test measures the absolute or exact amount of eosinophils in the body. </item>
     </string-array>
 </resources>
