@@ -1,6 +1,7 @@
 package edu.oakland.fives.bloodbuddy.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -10,6 +11,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import edu.oakland.fives.bloodbuddy.R;
 import edu.oakland.fives.bloodbuddy.model.DataModel;
@@ -25,15 +28,19 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     private Context mContext;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView testName;
+        TextView testName, watcher;
         TextView testUnits;
         EditText userValue;
+        ImageButton imageButton;
         public MyViewHolder(View view) {
             super(view);
 
             testName = (TextView)view.findViewById(R.id.textViewName);
             testUnits = (TextView)view.findViewById(R.id.textViewUnits);
             userValue = (EditText)view.findViewById(R.id.editText);
+            imageButton = (ImageButton)view.findViewById(R.id.clear);
+            watcher = (TextView)view.findViewById(R.id.value_watcher);
+
 
         }
     }
@@ -64,10 +71,21 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         holder.testName.setText(dataModel.getTestName());
         holder.testUnits.setText(dataModel.getTestUnits());
 
+        holder.imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                holder.userValue.setText("");
+                holder.watcher.setVisibility(View.INVISIBLE);
+                holder.watcher.setText("");
+            }
+        });
+
         //add listener to get the data from text fields once user change values
         holder.userValue.addTextChangedListener(new TextWatcher() {
 
-            public void afterTextChanged(Editable s) {}
+            public void afterTextChanged(Editable s) {
+
+            }
 
             public void beforeTextChanged(CharSequence s, int start,
                                           int count, int after) {
@@ -78,11 +96,24 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
                 try {
                     if(!s.equals("")){
                         Double ans = Double.parseDouble(s.toString());
-                        tests.get(position).setValue(ans);
-                        tests.get(position).setUserInput(true);
+                        if(ans<=500){
+                            tests.get(position).setValue(ans);
+                            tests.get(position).setUserInput(true);
+                            holder.watcher.setVisibility(View.INVISIBLE);
+                            holder.watcher.setText("");
+                        }
+                        else{
+                            tests.get(position).setUserInput(false);
+                            holder.watcher.setText("wrong value!");
+                            holder.watcher.setTextColor(Color.RED);
+                            holder.watcher.setVisibility(View.VISIBLE);
+                        }
+
                     }
                 }catch (Exception e){
                     tests.get(position).setUserInput(false);
+                    holder.watcher.setVisibility(View.INVISIBLE);
+                    holder.watcher.setText("");
                 }
 
 

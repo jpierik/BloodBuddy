@@ -4,6 +4,7 @@ package edu.oakland.fives.bloodbuddy.activity;
 import android.animation.ValueAnimator;
 import android.app.ActivityManager;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -25,6 +26,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.OvershootInterpolator;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -151,6 +153,8 @@ public class MainActivity extends AppCompatActivity {
         alphaAdapter.setFirstOnly(false);
         scaleInAnimationAdapter.setFirstOnly(false);
 
+        //listen to scroll..hide keyboard
+        recyclerView.addOnScrollListener(new CustomScrollListener());
     }
 
 
@@ -258,6 +262,36 @@ public class MainActivity extends AppCompatActivity {
                 });
         AlertDialog alert = builder.create();
         return alert;
+    }
+
+
+    //scroll listener
+    class CustomScrollListener extends RecyclerView.OnScrollListener {
+        CustomScrollListener(){
+        }
+        public void onScrollStateChanged(RecyclerView recyclerView, int newState){
+            switch (newState) {
+                case RecyclerView.SCROLL_STATE_IDLE:
+                    System.out.println("The RecyclerView is not scrolling");
+                    break;
+                case RecyclerView.SCROLL_STATE_DRAGGING:
+                    System.out.println("Scrolling now");
+                    View view = getCurrentFocus();
+                    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                    if (view != null) {
+                        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                    }
+                    break;
+                case RecyclerView.SCROLL_STATE_SETTLING:
+                    System.out.println("Scroll Settling");
+                    break;
+
+            }
+
+        }
+
+
+
     }
 
 
