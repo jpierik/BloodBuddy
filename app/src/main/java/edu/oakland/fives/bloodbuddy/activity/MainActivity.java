@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
             "%", "fL", "pg", "g/dL", "%", "Thousands/uL", "fL",
             "%", "%", "%", "%", "%", "Thousands/uL", "Thousands/uL", "Thousands/uL",
             "Thousands/uL", "Thousands/uL"};
+
     private ArrayList<DataModel> tests;
-    Button button;
     private RadioGroup radioGroupGender;
 
     @Override
@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //getTheme().applyStyle(R.style.MyRandomTheme, true);
         setContentView(R.layout.activity_main);
-        button = (Button)findViewById(R.id.button);
         radioGroupGender = (RadioGroup)findViewById(R.id.radioGroupGender);
 
 
