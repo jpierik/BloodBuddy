@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
     {
         AlertDialog myQuittingDialogBox =new AlertDialog.Builder(this)
                 //set message, title, and icon
-                .setTitle("Delete")
+                .setTitle("Clear Data")
                 .setMessage("Are you sure to clear all data?")
                 .setIcon(android.R.drawable.ic_delete)
 
@@ -164,13 +164,17 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                 .create();
+        swipeContainer.setRefreshing(false);
         return myQuittingDialogBox;
 
     }
 
     private void clearData() {
-        if(userTests!=null){
-            userTests.clear();
+        if(tests!=null){
+            if(userTests!=null){
+                userTests.clear();
+            }
+
             tests.clear();
             createRecycleViewer(recyclerView, tests);
         }
