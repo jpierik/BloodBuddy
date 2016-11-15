@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -43,16 +44,6 @@ import jp.wasabeef.recyclerview.animators.LandingAnimator;
 
 public class MainActivity extends AppCompatActivity {
 
-    //Todo: Fill in the correct names and units for tests
-    //array of test names
-    private String[] testCodes = {"WBC", "RBC", "HGB","HCT", "MCV", "MCH", "MCHC", "RDW", "PLT", "MPV",
-    "NEUT %", "LYMPH %", "MONO %", "EOS %", "BASO %", "NEUT,ABS", "LYMPH,ABS", "MONO,ABS", "EOS,ABS",
-    "BASO,ABS"};
-    //array of the test units
-    private String[] testUnits = {"Thousands/uL", "Millons/uL", "grams/dL",
-            "%", "fL", "pg", "g/dL", "%", "Thousands/uL", "fL",
-            "%", "%", "%", "%", "%", "Thousands/uL", "Thousands/uL", "Thousands/uL",
-            "Thousands/uL", "Thousands/uL"};
 
     private ArrayList<DataModel> tests;
     private RadioGroup radioGroupGender;
@@ -63,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
         //getTheme().applyStyle(R.style.MyRandomTheme, true);
         setContentView(R.layout.activity_main);
         radioGroupGender = (RadioGroup)findViewById(R.id.radioGroupGender);
+        Resources res = getResources();
+        String[] testNames = res.getStringArray(R.array.tests_array);
+        String[] testUnits = res.getStringArray(R.array.testUnits_array);
 
 
 
@@ -86,9 +80,9 @@ public class MainActivity extends AppCompatActivity {
       //  ActivityManager.TaskDescription tDesc = new ActivityManager.TaskDescription(null,null,getColor(R.color.yellow_700));
        // this.setTaskDescription(tDesc);
         //insert the test information into the data model and then add the data to the arraylist
-        for(int i =0;i<testCodes.length;i++){
+        for(int i = 0; i< testNames.length; i++){
             DataModel dataModel = new DataModel();
-            dataModel.setTestName(testCodes[i]);
+            dataModel.setTestName(testNames[i]);
             dataModel.setTestUnits(testUnits[i]);
             tests.add(dataModel);
         }
@@ -159,6 +153,13 @@ public class MainActivity extends AppCompatActivity {
 
     //test method to make sure values are collected correctly
     public void getTheData(View view) {
+
+        View view2 = getCurrentFocus();
+        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (view2 != null) {
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+
         radioGroupGender = (RadioGroup) findViewById(R.id.radioGroupGender);
         int selectedGenderID = radioGroupGender.getCheckedRadioButtonId();
 

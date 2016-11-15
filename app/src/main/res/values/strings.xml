@@ -18,6 +18,30 @@ I will not hold the creators of this application responsible if any harm befalls
     <string name="check_result_button">Check Result</string>
     <string name="radio_male">Male</string>
     <string name="radio_female">Female</string>
+
+
+    <string-array name="testUnits_array">
+        <item>Thousands/uL</item>
+        <item>Millons/uL</item>
+        <item>grams/dL</item>
+        <item>%</item>
+        <item>fL</item>
+        <item>pg</item>
+        <item>g/dL</item>
+        <item>%</item>
+        <item>Thousands/uL</item>
+        <item>fL</item>
+        <item>%</item>
+        <item>%</item>
+        <item>%</item>
+        <item>%</item>
+        <item>%</item>
+        <item>Thousands/uL</item>
+        <item>Thousands/uL</item>
+        <item>Thousands/uL</item>
+        <item>Thousands/uL</item>
+        <item>Thousands/uL</item>
+    </string-array>
     <string-array name="tests_array">
         <item>WBC</item>
         <item>RBC</item>
