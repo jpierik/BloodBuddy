@@ -358,32 +358,40 @@ public class TestValueAnalysis {
                     if (dataModel.getValue() < 1){
                         dataModel.setRange(1);
                         dataModel.setAnalysis("Your eosinophil percentage is low. This is not a problem. This result can usually be" +
-                                " ignored. ");
+                                " ignored. Eosinophils cause allergies, so it's a good thing that you don't have many. Keep in mind" +
+                                " that this test gives a percentage out of all white blood cells, and a percentage can always be" +
+                                " influenced by changes in the numbers of other blood cells. ");
                     }
                     else if (dataModel.getValue() > 3) {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Your eosinophil percentage is high. High eosinophil counts usually represent a problem" +
+                        dataModel.setAnalysis("Your eosinophil percentage is high. A High eosinophil count usually represents a problem" +
                                 " with allergies. Do you have allergies or symptoms consistent with allergies? This is a very strong sign" +
-                                " that those symptoms are caused by allergies.");
+                                " that your aliments are caused by allergies. Keep in mind that this test gives a percentage of white blood cells, and " +
+                                "a percentage can always be influenced by changes in the numbers of other blood cells. ");
                     } else {
                         dataModel.setRange(2);
                         dataModel.setAnalysis("You have the correct amount of eosinophils - very few. Looks like you don't have allergies.");
                     }
                     break;
                 case "BASO %":
-                    if (dataModel.getValue() < 0){
+                    if (dataModel.getValue() <= 0){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("");
+                        dataModel.setAnalysis("Your basophils are where they should be. They cause allergies, so it's a good thing" +
+                                " you don't have many of them.");
                     }
                     else if (dataModel.getValue() > 2) {
                         dataModel.setRange(3);
 
-                        dataModel.setAnalysis("BASO % Test High");
+                        dataModel.setAnalysis("Your basophil percentage is high. Basophils are cells that are associated with " +
+                                "allergies. Do you have any symptoms that may be caused by allergies? If so, allergies are probably" +
+                                " the cause of you not feeling well. Ask your doctor about the possibility of allergies. Keep in " +
+                                " mind that this test gives a percentage of white blood cells, and a percentage can always be influenced by changes" +
+                                " in the numbers of other white blood cells.");
                     }
-                    else {
+                    /*else {
                         dataModel.setRange(2);
                         dataModel.setAnalysis("BASO % Test Average");
-                    }
+                    }*/
                     break;
                 case "NEUT,ABS":
                     if (dataModel.getValue() < 2.3){
@@ -415,7 +423,7 @@ public class TestValueAnalysis {
                         dataModel.setRange(3);
                         dataModel.setAnalysis("Your lymphocyte count is high. High lymphocyte counts usually indicate that the body " +
                                 "is fighting some sort of infection, likely viral. High lymphocyte counts are also sometimes attributed to " +
-                                "certain types of leukemia, but please consult your doctor before making any decisions.");
+                                "certain types of leukemia, but please consult your doctor before making any decisions. ");
                     }
                     else {
                         dataModel.setRange(2);
