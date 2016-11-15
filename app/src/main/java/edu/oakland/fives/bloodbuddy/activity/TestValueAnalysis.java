@@ -315,7 +315,7 @@ public class TestValueAnalysis {
                     if (dataModel.getValue() < 18){
                         dataModel.setRange(1);
                         dataModel.setAnalysis("Your lymphocyte percentage is low. Lymphocytes counts are not usually low. This is an issue" +
-                                "that only your doctor can solve. The cause could be a great many things including malnutrition and HIV.");
+                                "that only your doctor can solve. The cause could be a great many things including malnutrition and HIV. ");
                     }
                     else if (dataModel.getValue() > 42) {
                         dataModel.setRange(3);
@@ -323,7 +323,8 @@ public class TestValueAnalysis {
                         dataModel.setAnalysis("Your lymphocyte percentage is high. High lymphocyte counts usually indicate that the body " +
                                 "is fighting some sort of infection, likely viral. High lymphocyte counts are also sometimes attributed to " +
                                 "certain types of leukemia, but please consult your doctor before making any decisions. Keep in mind" +
-                                " that this test measures a percentage. ");
+                                " that this test measures a percentage. Keep in mind that abnormal percentages can caused by " +
+                                " elevated numbers in other white cell percentages.");
                     }
                     else {
                         dataModel.setRange(2);
@@ -334,7 +335,7 @@ public class TestValueAnalysis {
                     if (dataModel.getValue() < 2){
                         dataModel.setRange(1);
                         dataModel.setAnalysis("Your monocyte percentage is low. Monocytes, also called macrophages, control the " +
-                                "immune system like generals control an army. Low monocyte percentage is never a good thing. This" +
+                                "immune system like generals control an army. A low monocyte percentage is never a good thing. This" +
                                 " could mean many things including, but not limited to malnutrition and/or cancer. See your" +
                                 " doctor for more information. Keep in mind that this test measures a percentage." +
                                 " Abnormal percentages have a possibility of being caused by elevated numbers in the other white" +
@@ -342,11 +343,15 @@ public class TestValueAnalysis {
                     }
                     else if (dataModel.getValue() > 11) {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Your monocyte percentage is high. Monocyte percentages are ");
+                        dataModel.setAnalysis("Your monocyte percentage is high. Monocytes, also called macrophates, control the " +
+                                "immune system like generals control an army. A high monocyte percentage. This could mean many things" +
+                                ", and this is a very complicated diagnosis. Leukemia can cause this, but so can many other things. " +
+                                "Keep in mind that abnormal percentages have a possibility of being caused by elevated numbers in" +
+                                " the other white cell percentages. Just because a test is high does not mean anything is wrong. ");
                     }
                     else {
                         dataModel.setRange(2);
-                        dataModel.setAnalysis("Your monocyte percentage is average. ");
+                        dataModel.setAnalysis("Your monocyte percentage is average. You have a healthy monocyte amount. ");
                     }
                     break;
                 case "EOS %":
@@ -358,16 +363,17 @@ public class TestValueAnalysis {
                     else if (dataModel.getValue() > 3) {
                         dataModel.setRange(3);
                         dataModel.setAnalysis("Your eosinophil percentage is high. High eosinophil counts usually represent a problem" +
-                                " with allergies. ");
+                                " with allergies. Do you have allergies or symptoms consistent with allergies? This is a very strong sign" +
+                                " that those symptoms are caused by allergies.");
                     } else {
                         dataModel.setRange(2);
-                        dataModel.setAnalysis("You have the correct amount of eosinophils.");
+                        dataModel.setAnalysis("You have the correct amount of eosinophils - very few. Looks like you don't have allergies.");
                     }
                     break;
                 case "BASO %":
                     if (dataModel.getValue() < 0){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("BASO % Test Low");
+                        dataModel.setAnalysis("");
                     }
                     else if (dataModel.getValue() > 2) {
                         dataModel.setRange(3);
