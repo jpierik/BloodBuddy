@@ -11,17 +11,17 @@ public class TestValueAnalysis {
 
     private ArrayList<DataModel> tests;
     private String gender;
-    private Context context;
+    //private Context context;
 
     public TestValueAnalysis(Context context, ArrayList<DataModel> tests, String gender) {
         this.tests = tests;
         this.gender=gender;
-        this.context=context;
+       // this.context=context;
     }
 
     public void analysis() {
 
-        Toast.makeText(context,""+gender, Toast.LENGTH_LONG).show();
+        //Toast.makeText(context,""+gender, Toast.LENGTH_LONG).show();
 
         for (DataModel dataModel : this.tests) {
             switch (dataModel.getTestName()) {
