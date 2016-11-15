@@ -32,11 +32,12 @@
                 android:textColor="@color/cardview_dark_background"
                 android:textSize="18sp" />
             <TextView
-                android:text="Hold here to know more!"
+                android:text="Hold here to learn more!"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/purple_A700"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -69,7 +70,8 @@
             </LinearLayout>
 
             <ImageButton
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
                 android:layout_height="40dp"
                 android:layout_gravity="bottom"
                 android:id="@+id/clear"
