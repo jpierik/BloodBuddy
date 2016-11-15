@@ -96,7 +96,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
                 try {
                     if(!s.equals("")){
                         Double ans = Double.parseDouble(s.toString());
-                        if(ans<=500){
+                        if(ans<=500 && !holder.testUnits.getText().equals("%")){
+                            tests.get(position).setValue(ans);
+                            tests.get(position).setUserInput(true);
+                            holder.watcher.setVisibility(View.INVISIBLE);
+                            holder.watcher.setText("");
+
+
+                        }
+                        else if(ans<=100 && holder.testUnits.getText().equals("%")){
                             tests.get(position).setValue(ans);
                             tests.get(position).setUserInput(true);
                             holder.watcher.setVisibility(View.INVISIBLE);
@@ -108,6 +116,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
                             holder.watcher.setTextColor(Color.RED);
                             holder.watcher.setVisibility(View.VISIBLE);
                         }
+
 
                     }
                 }catch (Exception e){
