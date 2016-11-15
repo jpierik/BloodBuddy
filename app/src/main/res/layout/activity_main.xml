@@ -5,13 +5,17 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
+    android:fitsSystemWindows="false"
     tools:context="edu.oakland.fives.bloodbuddy.activity.MainActivity">
 
-
+        <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
         <include layout="@layout/get_content_data"
             android:id="@+id/include"/>
-
+        </android.support.v4.widget.SwipeRefreshLayout>
 
 
 

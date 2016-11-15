@@ -14,7 +14,7 @@
 
         <ImageView
             android:id="@+id/ic_image"
-            android:src="@drawable/rbc"
+            android:src="@drawable/macrophage"
             android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:layout_height="200dp"

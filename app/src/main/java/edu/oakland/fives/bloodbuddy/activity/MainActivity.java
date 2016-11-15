@@ -15,6 +15,7 @@ import android.os.Build;
 import android.preference.PreferenceManager;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomSheetDialogFragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -47,6 +48,11 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<DataModel> tests;
     private RadioGroup radioGroupGender;
+    private RecyclerView recyclerView;
+    private SwipeRefreshLayout swipeContainer;
+    private ArrayList<DataModel> userTests;
+    private String[] testNames;
+    private String[] testUnits;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,9 +61,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         radioGroupGender = (RadioGroup)findViewById(R.id.radioGroupGender);
         Resources res = getResources();
-        String[] testNames = res.getStringArray(R.array.tests_array);
-        String[] testUnits = res.getStringArray(R.array.testUnits_array);
-
+        testNames = res.getStringArray(R.array.tests_array);
+        testUnits = res.getStringArray(R.array.testUnits_array);
+        swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
 
 
 //        getWindow().getDecorView().setSystemUiVisibility(
@@ -73,19 +79,14 @@ public class MainActivity extends AppCompatActivity {
         showDialog(0);
 
         //create recyclerview
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         //define the arraylist
         tests = new ArrayList<>();
       //  ActivityManager.TaskDescription tDesc = new ActivityManager.TaskDescription(null,null,getColor(R.color.yellow_700));
        // this.setTaskDescription(tDesc);
         //insert the test information into the data model and then add the data to the arraylist
-        for(int i = 0; i< testNames.length; i++){
-            DataModel dataModel = new DataModel();
-            dataModel.setTestName(testNames[i]);
-            dataModel.setTestUnits(testUnits[i]);
-            tests.add(dataModel);
-        }
+
 
 
 
@@ -120,10 +121,76 @@ public class MainActivity extends AppCompatActivity {
 //                return false;
 //            }
 //        });
+        swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
+
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                AlertDialog diaBox = confirmClearData();
+                diaBox.show();
+
+            }
+        });
+    }
+    private AlertDialog confirmClearData()
+    {
+        AlertDialog myQuittingDialogBox =new AlertDialog.Builder(this)
+                //set message, title, and icon
+                .setTitle("Delete")
+                .setMessage("Are you sure to clear all data?")
+                .setIcon(android.R.drawable.ic_delete)
+
+                .setPositiveButton("Clear", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        //your deleting code
+                        clearData();
+                        dialog.dismiss();
+
+                    }
+
+                })
+
+
+
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        swipeContainer.setRefreshing(false);
+                        dialog.dismiss();
+
+                    }
+                })
+                .create();
+        return myQuittingDialogBox;
+
+    }
+
+    private void clearData() {
+        if(userTests!=null){
+            userTests.clear();
+            tests.clear();
+            createRecycleViewer(recyclerView, tests);
+        }
+
+
+        //tests.clear();
+
+
+        swipeContainer.setRefreshing(false);
     }
 
 
     private void createRecycleViewer(RecyclerView recyclerView, ArrayList<DataModel> tests) {
+
+        for(int i = 0; i< testNames.length; i++){
+            DataModel dataModel = new DataModel();
+            dataModel.setTestName(testNames[i]);
+            dataModel.setTestUnits(testUnits[i]);
+            tests.add(dataModel);
+        }
         RecyclerAdapter mAdapter = new RecyclerAdapter(getApplicationContext(), tests);
 
         LinearLayoutManager gridLayoutManager =
@@ -165,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
 
         RadioButton radioGenderButton = (RadioButton) findViewById(selectedGenderID);
 
-        ArrayList<DataModel> userTests = new ArrayList<>();
+        userTests = new ArrayList<>();
         for (DataModel dataModel : tests) {
             if (dataModel.getUserInput()) {
                 userTests.add(dataModel);
@@ -178,12 +245,14 @@ public class MainActivity extends AppCompatActivity {
             BottomSheetDialogFragment bottomSheetDialogFragment = new ResultInformation();
             Bundle bundle = new Bundle();
             bundle.putSerializable("tests", userTests);
+            bundle.putString("gender", radioGenderButton.getText().toString());
             bottomSheetDialogFragment.setArguments(bundle);
             bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
         }
         else {
             Toast.makeText(getApplicationContext(), "No data entered!", Toast.LENGTH_SHORT).show();
         }
+
 
 
 

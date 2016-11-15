@@ -17,6 +17,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.OvershootInterpolator;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import edu.oakland.fives.bloodbuddy.R;
 import java.util.ArrayList;
@@ -45,7 +46,11 @@ public class ResultInformation extends BottomSheetDialogFragment {
         RecyclerView recyclerView = (RecyclerView) dialog.findViewById(R.id.recycler_view2);
         final ImageView arrow = (ImageView) dialog.findViewById(R.id.arrow_up);
 
+        TextView resultGender = (TextView)dialog.findViewById(R.id.result_for);
+
         ArrayList<DataModel> tests = (ArrayList<DataModel>) getArguments().getSerializable("tests");
+        String gender= getArguments().getString("gender");
+        resultGender.setText("Results for: "+gender);
         createRecycleViewer(recyclerView, tests);
         final Animation anim = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in_out);
         arrow.startAnimation(anim);
