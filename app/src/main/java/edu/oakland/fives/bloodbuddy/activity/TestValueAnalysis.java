@@ -228,7 +228,7 @@ public class TestValueAnalysis {
                     else if (dataModel.getValue() > 14.5) {
                         dataModel.setRange(3);
                         dataModel.setAnalysis("Your red cell distribution width is high. This result means that your red blood cells are" +
-                                " very ununiform in size. This usually indicates that your body is producing red cells at a very fast rate" +
+                                " very un-uniform in size. This usually indicates that your body is producing red cells at a very fast rate" +
                                 " seeing as younger red blood cells tend to be larger than older ones. This could also indicate that you are" +
                                 " anemic. See your doctor right away.");
                     } else {
@@ -322,7 +322,8 @@ public class TestValueAnalysis {
 
                         dataModel.setAnalysis("Your lymphocyte percentage is high. High lymphocyte counts usually indicate that the body " +
                                 "is fighting some sort of infection, likely viral. High lymphocyte counts are also sometimes attributed to " +
-                                "certain types of leukemia, but please consult your doctor before making any decisions.");
+                                "certain types of leukemia, but please consult your doctor before making any decisions. Keep in mind" +
+                                " that this test measures a percentage. ");
                     }
                     else {
                         dataModel.setRange(2);
@@ -332,11 +333,16 @@ public class TestValueAnalysis {
                 case "MONO %":
                     if (dataModel.getValue() < 2){
                         dataModel.setRange(1);
-                        dataModel.setAnalysis("Your monocyte percentage is low. ");
+                        dataModel.setAnalysis("Your monocyte percentage is low. Monocytes, also called macrophages, control the " +
+                                "immune system like generals control an army. Low monocyte percentage is never a good thing. This" +
+                                " could mean many things including, but not limited to malnutrition and/or cancer. See your" +
+                                " doctor for more information. Keep in mind that this test measures a percentage." +
+                                " Abnormal percentages have a possibility of being caused by elevated numbers in the other white" +
+                                " cell percentages.");
                     }
                     else if (dataModel.getValue() > 11) {
                         dataModel.setRange(3);
-                        dataModel.setAnalysis("Your monocyte percentage is high. ");
+                        dataModel.setAnalysis("Your monocyte percentage is high. Monocyte percentages are ");
                     }
                     else {
                         dataModel.setRange(2);
