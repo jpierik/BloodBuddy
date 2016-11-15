@@ -13,8 +13,10 @@
             android:id="@+id/swipeContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        <include layout="@layout/get_content_data"
-            android:id="@+id/include"/>
+
+                <include layout="@layout/get_content_data"
+                            android:id="@+id/include"/>
+
         </android.support.v4.widget.SwipeRefreshLayout>
 
 

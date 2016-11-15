@@ -18,6 +18,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -57,6 +58,7 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.MyViewHo
         TextView resultSummary;
         TextView resultValue;
         ProgressBar progressBar;
+        ImageView low, normal,high;
 
         public MyViewHolder(View view) {
             super(view);
@@ -66,6 +68,9 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.MyViewHo
             resultValue =(TextView)view.findViewById(R.id.textViewValue);
             resultSummary = (TextView)view.findViewById(R.id.test_result_summary);
             progressBar = (ProgressBar)view.findViewById(R.id.progressBar);
+            low = (ImageView)view.findViewById(R.id.arrow_low);
+            normal = (ImageView)view.findViewById(R.id.arrow_normal);
+            high = (ImageView)view.findViewById(R.id.arrow_high);
 
 
         }
@@ -97,22 +102,28 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.MyViewHo
         holder.testName.setText(dataModel.getTestName());
         holder.testUnits.setText(dataModel.getTestUnits());
         holder.resultSummary.setText(dataModel.getAnalysis());
-        holder.progressBar.setProgress(dataModel.getRange());
+        //holder.progressBar.setProgress(dataModel.getRange());
         holder.resultValue.setText("Value: "+dataModel.getValue());
         switch (dataModel.getRange()){
             case 1:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     holder.progressBar.setProgressTintList(ColorStateList.valueOf(Color.RED));
+                    holder.low.setVisibility(View.VISIBLE);
+                    holder.progressBar.setProgress(1);
                 }
                 break;
             case 2:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     holder.progressBar.setProgressTintList(ColorStateList.valueOf(Color.GREEN));
+                    holder.normal.setVisibility(View.VISIBLE);
+                    holder.progressBar.setProgress(3);
                 }
                 break;
             case 3:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     holder.progressBar.setProgressTintList(ColorStateList.valueOf(Color.RED));
+                    holder.high.setVisibility(View.VISIBLE);
+                    holder.progressBar.setProgress(5);
                 }
                 break;
         }

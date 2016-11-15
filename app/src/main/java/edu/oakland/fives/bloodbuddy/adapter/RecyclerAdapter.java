@@ -42,6 +42,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
             watcher = (TextView)view.findViewById(R.id.value_watcher);
 
 
+
         }
     }
 
