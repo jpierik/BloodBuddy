@@ -53,6 +53,7 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.MyViewHo
     private Context mContext;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
+        TextView resultValueLow,resultValueNormal,resultValueHigh;
         TextView testName;
         TextView testUnits;
         TextView resultSummary;
@@ -66,6 +67,9 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.MyViewHo
             testName = (TextView)view.findViewById(R.id.textViewName);
             testUnits = (TextView)view.findViewById(R.id.textViewUnits);
             resultValue =(TextView)view.findViewById(R.id.textViewValue);
+            resultValueLow =(TextView)view.findViewById(R.id.textViewValueLow);
+            resultValueNormal =(TextView)view.findViewById(R.id.textViewValueNormal);
+            resultValueHigh =(TextView)view.findViewById(R.id.textViewValueHigh);
             resultSummary = (TextView)view.findViewById(R.id.test_result_summary);
             progressBar = (ProgressBar)view.findViewById(R.id.progressBar);
             low = (ImageView)view.findViewById(R.id.arrow_low);
@@ -100,16 +104,21 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.MyViewHo
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         final DataModel dataModel = tests.get(position);
         holder.testName.setText(dataModel.getTestName());
-        holder.testUnits.setText(dataModel.getTestUnits());
+        holder.testUnits.setText(dataModel.getValue()+" "+dataModel.getTestUnits());
         holder.resultSummary.setText(dataModel.getAnalysis());
         //holder.progressBar.setProgress(dataModel.getRange());
-        holder.resultValue.setText("Value: "+dataModel.getValue());
+        holder.resultValue.setText("");
+        holder.resultValueLow.setText(""+dataModel.getValue());
+        holder.resultValueNormal.setText(""+dataModel.getValue());
+        holder.resultValueHigh.setText(""+dataModel.getValue());
+
         switch (dataModel.getRange()){
             case 1:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     holder.progressBar.setProgressTintList(ColorStateList.valueOf(Color.RED));
                     holder.low.setVisibility(View.VISIBLE);
                     holder.progressBar.setProgress(1);
+                    holder.resultValueLow.setVisibility(View.VISIBLE);
                 }
                 break;
             case 2:
@@ -117,6 +126,7 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.MyViewHo
                     holder.progressBar.setProgressTintList(ColorStateList.valueOf(Color.GREEN));
                     holder.normal.setVisibility(View.VISIBLE);
                     holder.progressBar.setProgress(3);
+                    holder.resultValueNormal.setVisibility(View.VISIBLE);
                 }
                 break;
             case 3:
@@ -124,6 +134,7 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.MyViewHo
                     holder.progressBar.setProgressTintList(ColorStateList.valueOf(Color.RED));
                     holder.high.setVisibility(View.VISIBLE);
                     holder.progressBar.setProgress(5);
+                    holder.resultValueHigh.setVisibility(View.VISIBLE);
                 }
                 break;
         }
