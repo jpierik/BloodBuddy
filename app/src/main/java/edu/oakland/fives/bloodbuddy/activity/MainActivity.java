@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
     private String[] testNames;
     private String[] testUnits;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,10 +74,10 @@ public class MainActivity extends AppCompatActivity {
 //// | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
 //                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         //start app intro
-         startAppIntro();
+        // startAppIntro();
         
         //show discliamer
-        showDialog(0);
+       // showDialog(0);
 
         //create recyclerview
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -284,57 +285,30 @@ public class MainActivity extends AppCompatActivity {
             }
         }));
     }
-    //app intro method
-    private void startAppIntro() {
-        Thread t = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                //  Initialize SharedPreferences
-                SharedPreferences getPrefs = PreferenceManager
-                        .getDefaultSharedPreferences(getBaseContext());
 
-                //  Create a new boolean and preference and set it to true
-                boolean isFirstStart = getPrefs.getBoolean("firstStartVersion12", true);
-                //  If the activity has never started before...
-                if (isFirstStart) {
-
-                    //  Launch app intro
-                    Intent i = new Intent(MainActivity.this, MyIntro.class);
-                    startActivity(i);
-
-                    //  Make a new preferences editor
-                    SharedPreferences.Editor e = getPrefs.edit();
-
-                    //  Edit preference to make it false because we don't want this to run again
-                    e.putBoolean("firstStartVersion12", false);
-
-                    //  Apply changes
-                    e.apply();
-                }
-            }
-        });
-
-        // Start the thread
-        t.start();
-    }
-    protected Dialog onCreateDialog(int id){
-        // show disclaimer....
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("LEGAL DISCLAIMER:").setMessage(getResources().getString(R.string.disclaimer_summary)).setView(LayoutInflater.from(this).inflate(R.layout.disclaimer_dialog,null))
-                .setCancelable(false)
-                .setPositiveButton("Agree", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        //accept
-                    }
-                })
-                .setNegativeButton("Disagree", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        //exit
-                        System.exit(0);
-                    }
-                });
-        AlertDialog alert = builder.create();
-        return alert;
+//    protected Dialog onCreateDialog(int id){
+//        // show disclaimer....
+//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//        builder.setTitle("LEGAL DISCLAIMER:").setMessage(getResources().getString(R.string.disclaimer_summary)).setView(LayoutInflater.from(this).inflate(R.layout.disclaimer_dialog,null))
+//                .setCancelable(false)
+//                .setPositiveButton("Agree", new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int id) {
+//                        //accept
+//                    }
+//                })
+//                .setNegativeButton("Disagree", new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int id) {
+//                        //exit
+//                        System.exit(0);
+//                    }
+//                });
+//        AlertDialog alert = builder.create();
+//        return alert;
+//    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.left_in, R.anim.right_out);
     }
 
 

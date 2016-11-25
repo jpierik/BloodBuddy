@@ -113,7 +113,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
                         }
                         else{
                             tests.get(position).setUserInput(false);
-                            holder.watcher.setText("wrong value!");
+                            holder.watcher.setText("invalid value!");
                             holder.watcher.setTextColor(Color.RED);
                             holder.watcher.setVisibility(View.VISIBLE);
                         }

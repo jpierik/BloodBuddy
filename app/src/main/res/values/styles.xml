@@ -31,5 +31,7 @@
         <item name="colorAccent">#00ff00</item> <!-- Whatever color you want-->
     </style>
 
-
+    <style name="WhiteCheck">
+        <item name="colorAccent">#00ff00</item>
+    </style>
 </resources>
