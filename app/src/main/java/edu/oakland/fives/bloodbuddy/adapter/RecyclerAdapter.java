@@ -28,7 +28,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     private Context mContext;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView testName, watcher;
+        TextView testName, watcher, swipeToClear;
         TextView testUnits;
         EditText userValue;
         ImageButton imageButton;
@@ -40,6 +40,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
             userValue = (EditText)view.findViewById(R.id.editText);
             imageButton = (ImageButton)view.findViewById(R.id.clear);
             watcher = (TextView)view.findViewById(R.id.value_watcher);
+            swipeToClear = (TextView)view.findViewById(R.id.swipeToClear);
 
 
 
@@ -80,7 +81,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
                 holder.watcher.setText("");
             }
         });
-
+        if(position==0){
+            holder.swipeToClear.setVisibility(View.VISIBLE);
+        }
         //add listener to get the data from text fields once user change values
         holder.userValue.addTextChangedListener(new TextWatcher() {
 

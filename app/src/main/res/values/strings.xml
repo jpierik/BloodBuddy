@@ -15,10 +15,10 @@ do so assuming full responsibilities of the consequences that result.
 I will not hold the creators of this application responsible if any harm befalls on me as a result of misinformation from this application.</string>
 
     <string name="test_info">null</string>
-    <string name="check_result_button">Check Result</string>
+    <string name="check_result_button">Analyze Result</string>
     <string name="radio_male">Male</string>
     <string name="radio_female">Female</string>
-    <string name="intro_text">Follow these 3 easy steps to anylize your\nblood work results:\n  1. Grap your blood work report.\n  2. Read and accept the app disclaimer.\n  3. Press the floating button to start entering your blood work data!</string>
+    <string name="intro_text">Follow these 3 easy steps to analyze your\nblood work results:\n1. Grap your blood work report.\n2. Read and accept the app disclaimer below.\n3. Press the floating button to start entering your blood work data!</string>
 
 
     <string-array name="testUnits_array">
