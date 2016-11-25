@@ -21,6 +21,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_expand_less_white_24dp"
                 android:gravity="center"
+                android:paddingTop="4dp"
                 android:layout_gravity="center"
                 android:id="@+id/arrow_up"
                 android:contentDescription="pull up" />

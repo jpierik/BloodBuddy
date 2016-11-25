@@ -64,7 +64,7 @@ public class ResultInformation extends BottomSheetDialogFragment {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                arrow.setVisibility(View.INVISIBLE);
+                arrow.setImageResource(R.drawable.ic_expand_more_white_24dp);
             }
 
             @Override

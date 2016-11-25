@@ -10,7 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import edu.oakland.fives.bloodbuddy.R;
@@ -66,7 +65,7 @@ public class BaseActivity extends AppCompatActivity {
         }
         else {
             CoordinatorLayout coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
-            Snackbar.make(coordinatorLayout,"Please Accept Disclaimer first!",Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(coordinatorLayout,"Please read and accept disclaimer first!",Snackbar.LENGTH_SHORT).show();
         }
 
     }
