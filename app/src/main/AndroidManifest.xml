@@ -12,6 +12,7 @@
             android:name=".activity.MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
+            android:label="Enter your data!"
             android:windowSoftInputMode="stateHidden">
 
         </activity>

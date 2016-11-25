@@ -307,8 +307,23 @@ public class MainActivity extends AppCompatActivity {
 //    }
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        overridePendingTransition(R.anim.left_in, R.anim.right_out);
+
+        new AlertDialog.Builder(this)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle("Closing Activity")
+                .setMessage("Performing tis action will take you back to home activity which will result of lost of all data you may entered. Are you sure you want to close this activity?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        MainActivity.super.onBackPressed();
+                        overridePendingTransition(R.anim.left_in, R.anim.right_out);
+                    }
+
+                })
+                .setNegativeButton("No", null)
+                .show();
     }
 
 
