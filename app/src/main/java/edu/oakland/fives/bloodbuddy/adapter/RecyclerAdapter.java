@@ -99,6 +99,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
                                       int before, int count) {
                 try {
                     if(!s.equals("")){
+                        holder.imageButton.setVisibility(View.VISIBLE);
                         Double ans = Double.parseDouble(s.toString());
                         if(ans<=500 && !holder.testUnits.getText().equals("%")){
                             tests.get(position).setValue(ans);
@@ -127,6 +128,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
                     tests.get(position).setUserInput(false);
                     holder.watcher.setVisibility(View.INVISIBLE);
                     holder.watcher.setText("");
+                    holder.imageButton.setVisibility(View.GONE);
                 }
 
 

@@ -140,8 +140,8 @@ public class MainActivity extends AppCompatActivity {
     {
         AlertDialog myQuittingDialogBox =new AlertDialog.Builder(this)
                 //set message, title, and icon
-                .setTitle("Clear Data")
-                .setMessage("Are you sure to clear all data?")
+                .setTitle("Clear Data!")
+                .setMessage("Are you sure you want to clear all entered data?")
                 .setIcon(android.R.drawable.ic_delete)
 
                 .setPositiveButton("Clear", new DialogInterface.OnClickListener() {

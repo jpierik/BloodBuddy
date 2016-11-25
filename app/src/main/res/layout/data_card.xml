@@ -86,12 +86,13 @@
             </LinearLayout>
 
             <ImageButton
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:visibility="gone"
                 android:layout_gravity="bottom"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:id="@+id/clear"
-                android:src="@android:drawable/ic_input_delete"
+                android:src="@drawable/ic_backspace_white_24dp"
                 android:contentDescription="delete value" />
             <TextView
                 android:layout_width="0dp"
