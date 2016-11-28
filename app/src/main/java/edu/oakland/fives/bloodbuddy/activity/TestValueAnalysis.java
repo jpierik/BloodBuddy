@@ -78,7 +78,7 @@ public class TestValueAnalysis {
                                 "of red cells produced to match what you need. In some situations, however, this can indicate more serious" +
                                 "diseases such as leukemia. ");
                     }
-                    else if (gender.matches("Female") && (dataModel.getValue() >= 20 || dataModel.getValue() <= 6.0)){
+                    else if (gender.matches("Female") && (dataModel.getValue() >= 20 && dataModel.getValue() <= 30.0)){
                         dataModel.setRange(2);
                         dataModel.setAnalysis("Your red blood cell count compared to the average woman is normal. This means you have" +
                                 "a healthy amount of red blood cells. ");
@@ -120,7 +120,7 @@ public class TestValueAnalysis {
                                 " Too much hemogobin is not a difficult problem for your body to solve. Give it some time, eat healthy," +
                                 "and the problem will usually sort itself out. ");
                     }
-                    else if (gender.matches("Female") && (dataModel.getValue() >= 20 && dataModel.getValue() <= 6.0)){
+                    else if (gender.matches("Female") && (dataModel.getValue() >= 20 && dataModel.getValue() <= 30.0)){
                         dataModel.setRange(2);
                         dataModel.setAnalysis("Everything looks good. Your red blood cells have the right amount of hemoglobin to" +
                                 " do their job.");
@@ -157,7 +157,7 @@ public class TestValueAnalysis {
                                 "your blood is high. This could mean a wide variety of things medically. Just know that the total" +
                                 "volume of your cells is lower than the average woman in comparison to the amount of fluid in your body.");
                     }
-                    else if (gender.matches("Female") && (dataModel.getValue() >= 20 && dataModel.getValue() <= 6.0)){
+                    else if (gender.matches("Female") && (dataModel.getValue() >= 20 && dataModel.getValue() <= 30.0)){
                         dataModel.setRange(2);
                         dataModel.setAnalysis("Your hematocrit is average. This means that, in comparison to the average woman, your blood" +
                                 "to cell ratio is just fine.");
