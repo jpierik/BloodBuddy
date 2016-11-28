@@ -18,7 +18,7 @@ I will not hold the creators of this application responsible if any harm befalls
     <string name="check_result_button">Analyze Result</string>
     <string name="radio_male">Male</string>
     <string name="radio_female">Female</string>
-    <string name="intro_text">Follow these 3 easy steps to analyze your\nblood work results:\n1. Grap your blood work report.\n2. Read and accept the app disclaimer below.\n3. Press the floating button to start entering your blood work data!</string>
+    <string name="intro_text">Follow these 3 easy steps to analyze your\nblood work results:\n1. Grab your blood work report.\n2. Read and accept the app disclaimer below.\n3. Press the floating button to start entering your blood work data!</string>
 
 
     <string-array name="testUnits_array">
